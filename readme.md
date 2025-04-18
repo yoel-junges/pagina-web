@@ -14,4 +14,3 @@
 
 
 
-linea de aberturas
