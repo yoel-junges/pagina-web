@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Líneas de Aberturas - Metalúrgica Breques</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="encabezado-contenido">
+            <img src="img/logo.png" alt="Logo Metalúrgica" class="logo">
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="lineas.html">Líneas de Aberturas</a></li>
+                    <li><a href="obras.html">Obras Realizadas</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+   
+    <section class="lineas-seleccion">
+        <h2>Nuestras líneas</h2>
+        <p>Conocé nuestras líneas de productos en aluminio y PVC, pensadas para adaptarse a todo tipo de proyectos.</p>
+        <div class="botones-lineas">
+            <button onclick="mostrarLinea('modena')">Línea Módena</button>
+            <button onclick="mostrarLinea('ha110')">Línea HA110</button>
+            <button onclick="mostrarLinea('pvc')">Línea PVC</button>
+        </div>
+
+        <div class="info-linea" id="modena" style="display: none;"> <!-- visible -->
+            <h3>Línea Módena</h3>
+            <p>Descripción completa de la línea Módena...</p>
+        </div>
+
+        <div class="info-linea" id="ha110" style="display: none;">
+            <h3>Línea HA110</h3>
+            <p>Descripción completa de la línea HA110...</p>
+        </div>
+
+        <div class="info-linea" id="pvc" style="display: none;">
+            <h3>Línea PVC</h3>
+            <p>Descripción completa de la línea PVC...</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Metalúrgica Breques. Todos los derechos reservados.</p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
