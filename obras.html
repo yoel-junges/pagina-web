@@ -2,25 +2,19 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Líneas de Aberturas</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Obras Realizadas - Metalúrgica Breques</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Encabezado reutilizable -->
+    <div id="header-placeholder"></div>
     
-    <!-- Acá se insertará el header dinámicamente -->
-    
+    <script src="js/loadHeader.js"></script>
+
     <main>
         <h1>Líneas de Aberturas</h1>
         <!-- Tu contenido -->
     </main>
-
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.body.insertAdjacentHTML("afterbegin", data);
-            });
-    </script>
 </body>
 </html>
 

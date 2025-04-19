@@ -8,14 +8,9 @@
 <body>
 
    <!-- Encabezado reutilizable -->
-<div id="header-container"></div>
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.body.insertAdjacentHTML("afterbegin", data);
-            });
-    </script>
+<div id="header-placeholder"></div>
+    
+    <script src="js/loadHeader.js"></script>
 
 
     
@@ -65,47 +60,75 @@
 <section class="productos">
     <div class="contenedor-productos">
         <h2>Nuestros Productos</h2>
-        <div class="grid-productos">
-            <a href="lineas.html" class="tarjeta-producto">
-                <img src="img/ejemplo.jpg" alt="Línea Herrero">
-                <h3>Línea Módena</h3>
-                <p>Diseño clásico y resistente. Ideal para proyectos residenciales y comerciales.</p>
-            </a>
-            <a href="lineas.html" class="tarjeta-producto">
-                <img src="img/ejemplo.jpg" alt="Línea Modena">
-                <h3>Línea HA110</h3>
-                <p>Alta prestación, aislamiento térmico y acústico. Perfecta para grandes obras.</p>
-            </a>
-            <a href="lineas.html" class="tarjeta-producto">
-                <img src="img/ejemplo.jpg" alt="Línea A-30">
-                <h3>Línea PVC</h3>
-                <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
-            </a>
-            <a href="lineas.html" class="tarjeta-producto">
-                <img src="img/ejemplo.jpg" alt="Línea A-40">
-                <h3>Línea PVC</h3>
-                <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
-            </a>
-            <a href="lineas.html" class="tarjeta-producto">
-                <img src="img/ejemplo.jpg" alt="Línea NIZA">
-                <h3>Línea PVC</h3>
-                <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
-            </a>
-            <a href="lineas.html" class="tarjeta-producto">
-                <img src="img/ejemplo.jpg" alt="Línea Mediterranea RPT M-3">
-                <h3>Línea PVC</h3>
-                <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
-            </a>
-            <a href="lineas.html" class="tarjeta-producto">
-                <img src="img/ejemplo.jpg" alt="Línea Línea Mediterranea RPT M-5">
-                <h3>Línea PVC</h3>
-                <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
-            </a>
-            <a href="lineas.html" class="tarjeta-producto">
-                <img src="img/ejemplo.jpg" alt="Línea Línea Mediterranea RPT M-7">
-                <h3>Línea PVC</h3>
-                <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
-            </a>
+        <div class="carrusel-contenedor">
+            <button class="carrusel-btn prev">❮</button>
+            <div class="carrusel">
+                <a href="lineas.html" class="tarjeta-producto">
+                    <img src="img/ejemplo.jpg" alt="Línea Herrero">
+                    <div class="tarjeta-contenido">
+                        <h3>Línea Módena</h3>
+                        <p>Diseño clásico y resistente. Ideal para proyectos residenciales y comerciales.</p>
+                        <button class="btn-ver-mas">Ver más</button>
+                    </div>
+                </a>
+                <a href="lineas.html" class="tarjeta-producto">
+                    <img src="img/ejemplo.jpg" alt="Línea Modena">
+                    <div class="tarjeta-contenido">
+                        <h3>Línea HA110</h3>
+                        <p>Alta prestación, aislamiento térmico y acústico. Perfecta para grandes obras.</p>
+                        <button class="btn-ver-mas">Ver más</button>
+                    </div>
+                </a>
+                <a href="lineas.html" class="tarjeta-producto">
+                    <img src="img/ejemplo.jpg" alt="Línea A-30">
+                    <div class="tarjeta-contenido">
+                        <h3>Línea PVC</h3>
+                        <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
+                        <button class="btn-ver-mas">Ver más</button>
+                    </div>
+                </a>
+                <a href="lineas.html" class="tarjeta-producto">
+                    <img src="img/ejemplo.jpg" alt="Línea A-40">
+                    <div class="tarjeta-contenido">
+                        <h3>Línea PVC</h3>
+                        <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
+                        <button class="btn-ver-mas">Ver más</button>
+                    </div>
+                </a>
+                <a href="lineas.html" class="tarjeta-producto">
+                    <img src="img/ejemplo.jpg" alt="Línea NIZA">
+                    <div class="tarjeta-contenido">
+                        <h3>Línea PVC</h3>
+                        <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
+                        <button class="btn-ver-mas">Ver más</button>
+                    </div>
+                </a>
+                <a href="lineas.html" class="tarjeta-producto">
+                    <img src="img/ejemplo.jpg" alt="Línea Mediterranea RPT M-3">
+                    <div class="tarjeta-contenido">
+                        <h3>Línea PVC</h3>
+                        <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
+                        <button class="btn-ver-mas">Ver más</button>
+                    </div>
+                </a>
+                <a href="lineas.html" class="tarjeta-producto">
+                    <img src="img/ejemplo.jpg" alt="Línea Línea Mediterranea RPT M-5">
+                    <div class="tarjeta-contenido">
+                        <h3>Línea PVC</h3>
+                        <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
+                        <button class="btn-ver-mas">Ver más</button>
+                    </div>
+                </a>
+                <a href="lineas.html" class="tarjeta-producto">
+                    <img src="img/ejemplo.jpg" alt="Línea Línea Mediterranea RPT M-7">
+                    <div class="tarjeta-contenido">
+                        <h3>Línea PVC</h3>
+                        <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
+                        <button class="btn-ver-mas">Ver más</button>
+                    </div>
+                </a>
+            </div>
+            <button class="carrusel-btn next">❯</button>
         </div>
     </div>
 </section>
@@ -115,16 +138,9 @@
 <footer class="footer">
     <div class="footer-contenido">
         <p>&copy; 2025 Metalúrgica Breques. Todos los derechos reservados.</p>
-        <p>Dirección: Saavedra 2340, Esperanza, Santa Fe</p>
-        <p>Tel: (123) 456-7890 | Email: contacto@metalurgica.com</p>
-        <div class="redes">
-            <a href="#">Facebook</a> |
-            <a href="#">Instagram</a> |
-            <a href="#">WhatsApp</a>
-        </div>
     </div>
 </footer>
 
-
+    <script src="js/carrusel.js"></script>
 </body>
 </html>

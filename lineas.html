@@ -6,50 +6,226 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Encabezado reutilizable -->
+    <div id="header-placeholder"></div>
+    
+    <script src="js/loadHeader.js"></script>
 
-   <!-- Encabezado reutilizable -->
-   <div id="header-container"></div>
+    <main class="lineas-container">
+        <h1>Nuestras Líneas de Aberturas</h1>
+        
+        <!-- Navegación de líneas -->
+        <nav class="lineas-nav">
+            <button class="linea-btn active" data-linea="modena">Línea Módena</button>
+            <button class="linea-btn" data-linea="ha110">Línea HA110</button>
+            <button class="linea-btn" data-linea="pvc">Línea PVC</button>
+            <button class="linea-btn" data-linea="niza">Línea Niza</button>
+            <button class="linea-btn" data-linea="mediterranea">Línea Mediterránea</button>
+        </nav>
 
-    <script>
-    fetch("header.html")
-        .then(res => response.text())
-        .then(data => {
-            document.body.insertAdjacentHTML("afterbegin", data);
-        });
-    </script>
+        <!-- Contenido de las líneas -->
+        <div class="lineas-contenido">
+            <!-- Línea Módena -->
+            <section class="linea-info active" id="modena">
+                <div class="linea-header">
+                    <h2>Línea Módena</h2>
+                    <p class="linea-descripcion">Diseño clásico y resistente que combina elegancia con funcionalidad. Perfecta para proyectos residenciales y comerciales que buscan un equilibrio entre estética y durabilidad. Nuestra línea Módena ofrece una amplia gama de opciones de personalización, permitiendo adaptarse a diferentes estilos arquitectónicos y necesidades específicas de cada proyecto. Con más de 20 años de experiencia en el mercado, esta línea ha demostrado su excelencia en términos de aislamiento térmico, acústico y seguridad.</p>
+                </div>
+                
+                <div class="linea-caracteristicas">
+                    <div class="caracteristica">
+                        <h3>Características Técnicas</h3>
+                        <ul>
+                            <li>Perfil de aluminio de alta resistencia</li>
+                            <li>Doble vidriado hermético (DVH)</li>
+                            <li>Sistema de cierre multipunto</li>
+                            <li>Juntas de estanqueidad perimetrales</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="caracteristica">
+                        <h3>Ventajas</h3>
+                        <ul>
+                            <li>Excelente aislamiento térmico y acústico</li>
+                            <li>Máxima seguridad</li>
+                            <li>Diseño versátil</li>
+                            <li>Bajo mantenimiento</li>
+                        </ul>
+                    </div>
+                </div>
 
-   
-    <section class="lineas-seleccion">
-        <h2>Nuestras líneas</h2>
-        <p>Conocé nuestras líneas de productos en aluminio y PVC, pensadas para adaptarse a todo tipo de proyectos.</p>
-        <div class="botones-lineas">
-            <button onclick="mostrarLinea('modena')">Línea Módena</button>
-            <button onclick="mostrarLinea('ha110')">Línea HA110</button>
-            <button onclick="mostrarLinea('pvc')">Línea PVC</button>
+                <div class="linea-galeria">
+                    <h3>Galería de Imágenes</h3>
+                    <div class="galeria-grid">
+                        <img src="img/ejemplo.jpg" alt="Línea Módena - Vista frontal">
+                        <img src="img/ejemplo.jpg" alt="Línea Módena - Detalle de perfil">
+                        <img src="img/ejemplo.jpg" alt="Línea Módena - Instalación">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Línea HA110 -->
+            <section class="linea-info" id="ha110">
+                <div class="linea-header">
+                    <h2>Línea HA110</h2>
+                    <p class="linea-descripcion">Alta prestación, aislamiento térmico y acústico. Perfecta para grandes obras.</p>
+                </div>
+                
+                <div class="linea-caracteristicas">
+                    <div class="caracteristica">
+                        <h3>Características Técnicas</h3>
+                        <ul>
+                            <li>Perfil de 110mm de espesor</li>
+                            <li>Triple vidriado hermético (TVH)</li>
+                            <li>Sistema de cierre de alta seguridad</li>
+                            <li>Juntas de estanqueidad reforzadas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="caracteristica">
+                        <h3>Ventajas</h3>
+                        <ul>
+                            <li>Máximo aislamiento térmico</li>
+                            <li>Protección acústica superior</li>
+                            <li>Alta resistencia a la intemperie</li>
+                            <li>Diseño premium</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="linea-galeria">
+                    <h3>Galería de Imágenes</h3>
+                    <div class="galeria-grid">
+                        <img src="img/ejemplo.jpg" alt="Línea HA110 - Vista frontal">
+                        <img src="img/ejemplo.jpg" alt="Línea HA110 - Detalle de perfil">
+                        <img src="img/ejemplo.jpg" alt="Línea HA110 - Instalación">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Línea PVC -->
+            <section class="linea-info" id="pvc">
+                <div class="linea-header">
+                    <h2>Línea PVC</h2>
+                    <p class="linea-descripcion">En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
+                </div>
+                
+                <div class="linea-caracteristicas">
+                    <div class="caracteristica">
+                        <h3>Características Técnicas</h3>
+                        <ul>
+                            <li>Perfil de PVC de alta calidad</li>
+                            <li>Doble vidriado hermético (DVH)</li>
+                            <li>Sistema de cierre multipunto</li>
+                            <li>Refuerzos de acero galvanizado</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="caracteristica">
+                        <h3>Ventajas</h3>
+                        <ul>
+                            <li>Máxima eficiencia energética</li>
+                            <li>Excelente aislamiento acústico</li>
+                            <li>Mínimo mantenimiento</li>
+                            <li>Diseño contemporáneo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="linea-galeria">
+                    <h3>Galería de Imágenes</h3>
+                    <div class="galeria-grid">
+                        <img src="img/ejemplo.jpg" alt="Línea PVC - Vista frontal">
+                        <img src="img/ejemplo.jpg" alt="Línea PVC - Detalle de perfil">
+                        <img src="img/ejemplo.jpg" alt="Línea PVC - Instalación">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Línea Niza -->
+            <section class="linea-info" id="niza">
+                <div class="linea-header">
+                    <h2>Línea Niza</h2>
+                    <p class="linea-descripcion">Diseño elegante y funcional para proyectos residenciales.</p>
+                </div>
+                
+                <div class="linea-caracteristicas">
+                    <div class="caracteristica">
+                        <h3>Características Técnicas</h3>
+                        <ul>
+                            <li>Perfil de aluminio de 70mm</li>
+                            <li>Doble vidriado hermético (DVH)</li>
+                            <li>Sistema de cierre multipunto</li>
+                            <li>Juntas de estanqueidad perimetrales</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="caracteristica">
+                        <h3>Ventajas</h3>
+                        <ul>
+                            <li>Excelente relación calidad-precio</li>
+                            <li>Buen aislamiento térmico y acústico</li>
+                            <li>Diseño versátil</li>
+                            <li>Fácil mantenimiento</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="linea-galeria">
+                    <h3>Galería de Imágenes</h3>
+                    <div class="galeria-grid">
+                        <img src="img/ejemplo.jpg" alt="Línea Niza - Vista frontal">
+                        <img src="img/ejemplo.jpg" alt="Línea Niza - Detalle de perfil">
+                        <img src="img/ejemplo.jpg" alt="Línea Niza - Instalación">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Línea Mediterránea -->
+            <section class="linea-info" id="mediterranea">
+                <div class="linea-header">
+                    <h2>Línea Mediterránea</h2>
+                    <p class="linea-descripcion">Diseño mediterráneo con máxima funcionalidad.</p>
+                </div>
+                
+                <div class="linea-caracteristicas">
+                    <div class="caracteristica">
+                        <h3>Características Técnicas</h3>
+                        <ul>
+                            <li>Perfil de aluminio de 80mm</li>
+                            <li>Doble vidriado hermético (DVH)</li>
+                            <li>Sistema de cierre multipunto</li>
+                            <li>Juntas de estanqueidad reforzadas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="caracteristica">
+                        <h3>Ventajas</h3>
+                        <ul>
+                            <li>Estilo mediterráneo único</li>
+                            <li>Excelente aislamiento</li>
+                            <li>Alta durabilidad</li>
+                            <li>Diseño versátil</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="linea-galeria">
+                    <h3>Galería de Imágenes</h3>
+                    <div class="galeria-grid">
+                        <img src="img/ejemplo.jpg" alt="Línea Mediterránea - Vista frontal">
+                        <img src="img/ejemplo.jpg" alt="Línea Mediterránea - Detalle de perfil">
+                        <img src="img/ejemplo.jpg" alt="Línea Mediterránea - Instalación">
+                    </div>
+                </div>
+            </section>
         </div>
-
-        <div class="info-linea" id="modena" style="display: none;"> <!-- visible -->
-            <h3>Línea Módena</h3>
-            <p>Descripción completa de la línea Módena...</p>
-        </div>
-
-        <div class="info-linea" id="ha110" style="display: none;">
-            <h3>Línea HA110</h3>
-            <p>Descripción completa de la línea HA110...</p>
-        </div>
-
-        <div class="info-linea" id="pvc" style="display: none;">
-            <h3>Línea PVC</h3>
-            <p>Descripción completa de la línea PVC...</p>
-        </div>
-    </section>
+    </main>
 
     <footer class="footer">
         <p>&copy; 2025 Metalúrgica Breques. Todos los derechos reservados.</p>
     </footer>
 
-
-    <script src="js/script.js"></script>
-
+    <script src="js/lineas.js"></script>
 </body>
 </html>
