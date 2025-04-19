@@ -7,19 +7,17 @@
 </head>
 <body>
 
-    <header class="encabezado">
-        <div class="encabezado-contenido">
-            <img src="img/logo.png" alt="Logo Metalúrgica" class="logo">
-            <nav>
-                <ul class="menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="lineas.html">Líneas de Aberturas</a></li>
-                    <li><a href="obras.html">Obras Realizadas</a></li>
-                    <li><a href="contacto.html">Contáctanos</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+   <!-- Encabezado reutilizable -->
+   <div id="header-container"></div>
+
+    <script>
+    fetch("header.html")
+        .then(res => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML("afterbegin", data);
+        });
+    </script>
+
    
     <section class="lineas-seleccion">
         <h2>Nuestras líneas</h2>

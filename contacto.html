@@ -1,14 +1,25 @@
- <!-- Encabezado -->
-    <header class="encabezado">
-        <div class="contenedor-logo">
-            <img src="img/logo.png" alt="Logo Metalúrgica" class="logo">
-        </div>
-        <nav class="navegacion">
-            <ul class="menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="lineas.html">Líneas de Aberturas</a></li>
-                <li><a href="obras.html">Obras Realizadas</a></li>
-                <li><a href="contacto.html">Contáctanos</a></li>
-            </ul>
-        </nav>
-    </header>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Líneas de Aberturas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    
+    <!-- Acá se insertará el header dinámicamente -->
+    
+    <main>
+        <h1>Líneas de Aberturas</h1>
+        <!-- Tu contenido -->
+    </main>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("afterbegin", data);
+            });
+    </script>
+</body>
+</html>
