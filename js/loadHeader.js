@@ -1,5 +1,5 @@
 function loadHeader() {
-    fetch('header.html')
+    fetch('/header.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Error al cargar el header');

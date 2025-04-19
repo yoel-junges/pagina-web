@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Obras Realizadas - Metalúrgica Breques</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/obras.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Encabezado reutilizable -->
@@ -11,10 +13,83 @@
     
     <script src="js/loadHeader.js"></script>
 
-    <main>
-        <h1>Líneas de Aberturas</h1>
-        <!-- Tu contenido -->
+    <main class="obras-container">
+        <h1>Obras Realizadas</h1>
+        
+        <!-- Filtros -->
+        <div class="filtros">
+            <button class="filtro-btn active" data-categoria="todas">Todas</button>
+            <button class="filtro-btn" data-categoria="residencial">Residencial</button>
+            <button class="filtro-btn" data-categoria="comercial">Comercial</button>
+            <button class="filtro-btn" data-categoria="industrial">Industrial</button>
+        </div>
+
+        <!-- Grid de obras -->
+        <div class="obras-grid">
+            <!-- Obra 1 -->
+            <div class="obra-card" data-categoria="residencial">
+                <div class="obra-imagen">
+                    <img src="img/obra1.jpg" alt="Obra Residencial 1">
+                    <div class="obra-overlay">
+                        <h3>Casa Familiar</h3>
+                        <p>Esperanza, Santa Fe</p>
+                    </div>
+                </div>
+                <div class="obra-info">
+                    <h2>Casa Familiar</h2>
+                    <p>Instalación de aberturas de aluminio en vivienda unifamiliar. Proyecto completo con ventanas y puertas de la línea Módena.</p>
+                    <div class="obra-caracteristicas">
+                        <span><i class="fas fa-home"></i> 120m²</span>
+                        <span><i class="fas fa-calendar"></i> 2023</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Obra 2 -->
+            <div class="obra-card" data-categoria="comercial">
+                <div class="obra-imagen">
+                    <img src="img/obra2.jpg" alt="Obra Comercial 1">
+                    <div class="obra-overlay">
+                        <h3>Local Comercial</h3>
+                        <p>Esperanza, Santa Fe</p>
+                    </div>
+                </div>
+                <div class="obra-info">
+                    <h2>Local Comercial</h2>
+                    <p>Instalación de fachada completa en local comercial. Aberturas de la línea HA110 para máxima eficiencia energética.</p>
+                    <div class="obra-caracteristicas">
+                        <span><i class="fas fa-building"></i> 200m²</span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Obra 3 -->
+            <div class="obra-card" data-categoria="industrial">
+                <div class="obra-imagen">
+                    <img src="img/obra3.jpg" alt="Obra Industrial 1">
+                    <div class="obra-overlay">
+                        <h3>Nave Industrial</h3>
+                        <p>Esperanza, Santa Fe</p>
+                    </div>
+                </div>
+                <div class="obra-info">
+                    <h2>Nave Industrial</h2>
+                    <p>Proyecto de aberturas para nave industrial. Puertas corredizas y ventanas de gran formato.</p>
+                    <div class="obra-caracteristicas">
+                        <span><i class="fas fa-warehouse"></i> 500m²</span>
+                        <span><i class="fas fa-calendar"></i> 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Metalúrgica Breques. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/obras.js"></script>
 </body>
 </html>
 
