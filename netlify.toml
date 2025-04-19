@@ -1,6 +1,6 @@
 [build]
-  command = "echo 'No se requiere comando de compilación'"
   publish = "."
+  command = "echo 'Build iniciado'"
   functions = "functions"
 
 [[redirects]]
