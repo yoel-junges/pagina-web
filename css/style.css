@@ -93,64 +93,68 @@ body {
     width: 100%;
 }
 
-/* Menú hamburguesa para móviles */
+/* Estilos del menú móvil */
 .menu-toggle {
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
     cursor: pointer;
+    padding: 10px;
 }
 
 .menu-toggle span {
     display: block;
+    width: 25px;
     height: 3px;
-    width: 100%;
     background-color: #333;
-    border-radius: 3px;
-    transition: all 0.3s ease;
+    margin: 5px 0;
+    transition: 0.3s;
 }
 
-/* Media queries para responsividad */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
 @media (max-width: 768px) {
     .menu-toggle {
-        display: flex;
+        display: block;
     }
 
     .nav {
         position: fixed;
-        top: 90px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 90px);
-        background-color: white;
-        flex-direction: column;
-        align-items: center;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #fff;
         padding: 20px;
-        transition: left 0.3s ease;
+        transition: 0.3s;
+        z-index: 1000;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
     }
 
     .nav.active {
-        left: 0;
+        right: 0;
     }
 
     .menu {
         flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        align-items: flex-start;
+        margin-top: 50px;
     }
 
-    .menu-toggle.active span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
+    .menu li {
+        margin: 15px 0;
     }
 
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
+    .menu li a {
+        font-size: 1.2rem;
     }
 }
 
