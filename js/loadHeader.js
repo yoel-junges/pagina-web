@@ -8,6 +8,9 @@ function loadHeader() {
         })
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
+            // Disparar evento personalizado cuando el header se cargue
+            const event = new CustomEvent('headerLoaded');
+            document.dispatchEvent(event);
         })
         .catch(error => {
             console.error('Error:', error);

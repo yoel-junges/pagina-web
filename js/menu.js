@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+function initMenu() {
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav');
     const menu = document.querySelector('.menu');
@@ -19,5 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 menuToggle.classList.remove('active');
             });
         });
+    }
+}
+
+// Escuchar el evento de carga del header
+document.addEventListener('headerLoaded', initMenu);
+
+// También intentar inicializar cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    // Si el header ya está cargado, inicializar el menú
+    if (document.querySelector('.header')) {
+        initMenu();
     }
 }); 
