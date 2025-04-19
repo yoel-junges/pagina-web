@@ -2,21 +2,18 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Obras Realizadas - Metalúrgica Breques</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metalúrgica Breques - Obras</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/obras.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Encabezado reutilizable -->
     <div id="header-placeholder"></div>
-    
-    <script src="js/loadHeader.js"></script>
 
     <main class="obras-container">
         <h1>Obras Realizadas</h1>
         
-        <!-- Filtros -->
         <div class="filtros">
             <button class="filtro-btn active" data-categoria="todas">Todas</button>
             <button class="filtro-btn" data-categoria="residencial">Residencial</button>
@@ -24,7 +21,6 @@
             <button class="filtro-btn" data-categoria="industrial">Industrial</button>
         </div>
 
-        <!-- Grid de obras -->
         <div class="obras-grid">
             <!-- Obra 1 -->
             <div class="obra-card" data-categoria="residencial">
@@ -85,10 +81,57 @@
         </div>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2025 Metalúrgica Breques. Todos los derechos reservados.</p>
-    </footer>
+    <!-- Nueva sección de Galería de Obras -->
+    <section class="galeria-obras">
+        <div class="galeria-container">
+            <h2>Galería de Obras</h2>
+            <p class="galeria-descripcion">Una selección de nuestras obras realizadas en diferentes proyectos</p>
+            
+            <div class="galeria-masonry">
+                <div class="galeria-item">
+                    <img src="img/obra4.jpg" alt="Obra Residencial">
+                    <div class="galeria-overlay">
+                        <span>Obra Residencial</span>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="img/obra5.jpg" alt="Obra Comercial">
+                    <div class="galeria-overlay">
+                        <span>Obra Comercial</span>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="img/obra6.jpg" alt="Obra Industrial">
+                    <div class="galeria-overlay">
+                        <span>Obra Industrial</span>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="img/obra7.jpg" alt="Obra Residencial">
+                    <div class="galeria-overlay">
+                        <span>Obra Residencial</span>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="img/obra8.jpg" alt="Obra Comercial">
+                    <div class="galeria-overlay">
+                        <span>Obra Comercial</span>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="img/obra9.jpg" alt="Obra Industrial">
+                    <div class="galeria-overlay">
+                        <span>Obra Industrial</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <div id="footer-placeholder"></div>
+
+    <script src="js/loadHeader.js"></script>
+    <script src="js/loadFooter.js"></script>
     <script src="js/obras.js"></script>
 </body>
 </html>
