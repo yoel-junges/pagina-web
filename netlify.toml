@@ -1,0 +1,9 @@
+[build]
+  command = "echo 'No se requiere comando de compilación'"
+  publish = "."
+  functions = "functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 
