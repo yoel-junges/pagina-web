@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    padding-top: 80px; /* Espacio para el header fijo */
 }
 
 /* Estilos generales */
@@ -168,6 +169,54 @@ body {
     .header-container {
         padding: 15px 20px;
     }
+
+    body {
+        padding-top: 70px; /* Menos espacio en móvil */
+    }
+    
+    .hero {
+        height: calc(100vh - 70px);
+        min-height: 400px;
+        margin-top: -70px;
+    }
+    
+    .hero-contenido {
+        padding-top: 90px;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+        padding: 0 15px;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 60px;
+    }
+    
+    .hero {
+        height: calc(100vh - 60px);
+        min-height: 350px;
+        margin-top: -60px;
+    }
+    
+    .hero-contenido {
+        padding-top: 80px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
 }
 
 /* Efecto de scroll en el header */
@@ -295,8 +344,8 @@ section {
     background-image: url("../img/inicio.jpg");
     background-size: cover;
     background-position: center;
-    height: 80vh;
-    min-height: 600px;
+    height: calc(100vh - 80px); /* Restamos la altura del header */
+    min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -304,6 +353,7 @@ section {
     color: white;
     position: relative;
     margin-bottom: 0;
+    margin-top: -80px; /* Compensamos el padding-top del body */
 }
 
 .hero::before {
@@ -311,7 +361,7 @@ section {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -324,6 +374,8 @@ section {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    margin: 0 auto;
+    padding-top: 100px; /* Espacio adicional para el header */
 }
 
 .hero h1 {
@@ -332,43 +384,7 @@ section {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     padding: 0 20px;
     line-height: 1.2;
-    white-space: nowrap;
-}
-
-@media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 3rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        height: 70vh;
-        min-height: 500px;
-    }
-    
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero p {
-        font-size: 1.3rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        height: 60vh;
-        min-height: 400px;
-    }
-    
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .hero p {
-        font-size: 1.1rem;
-    }
+    max-width: 90%;
 }
 
 .hero p {
@@ -376,6 +392,61 @@ section {
     margin-bottom: 30px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     max-width: 800px;
+    padding: 0 20px;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+        padding: 0 15px;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+        padding: 0 15px;
+    }
+    
+    .hero-contenido {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 50vh;
+        min-height: 350px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+        padding: 0 10px;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+    
+    .btn-hero {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
 }
 
 .btn-hero {
