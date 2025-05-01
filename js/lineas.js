@@ -1,43 +1,70 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const botones = document.querySelectorAll('.linea-btn');
-    const secciones = document.querySelectorAll('.linea-info');
-
-    // Función para mostrar una sección específica
-    function mostrarSeccion(id) {
-        // Ocultar todas las secciones
-        secciones.forEach(seccion => {
-            seccion.classList.remove('active');
-        });
-
-        // Desactivar todos los botones
-        botones.forEach(boton => {
-            boton.classList.remove('active');
-        });
-
-        // Mostrar la sección seleccionada
-        const seccionSeleccionada = document.getElementById(id);
-        if (seccionSeleccionada) {
-            seccionSeleccionada.classList.add('active');
-        }
-
-        // Activar el botón correspondiente
-        const botonSeleccionado = document.querySelector(`[data-linea="${id}"]`);
-        if (botonSeleccionado) {
-            botonSeleccionado.classList.add('active');
+    // Obtener el hash de la URL (la parte después del #)
+    const hash = window.location.hash;
+    
+    // Primero, desplazar la página al inicio
+    window.scrollTo(0, 0);
+    
+    if (hash) {
+        // Remover el # del hash
+        const lineaId = hash.substring(1);
+        
+        // Encontrar el botón correspondiente y activarlo
+        const botonLinea = document.querySelector(`.linea-btn[data-linea="${lineaId}"]`);
+        if (botonLinea) {
+            // Remover la clase active de todos los botones
+            document.querySelectorAll('.linea-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Remover la clase active de todas las secciones
+            document.querySelectorAll('.linea-info').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Activar el botón y la sección correspondiente
+            botonLinea.classList.add('active');
+            const seccionActiva = document.getElementById(lineaId);
+            seccionActiva.classList.add('active');
+            
+            // Hacer scroll suave hasta la parte superior de la sección
+            setTimeout(() => {
+                window.scrollTo({
+                    top: seccionActiva.offsetTop - 200, // Aumentado el offset para ir más arriba
+                    behavior: 'smooth'
+                });
+            }, 100);
         }
     }
 
-    // Agregar event listeners a los botones
-    botones.forEach(boton => {
-        boton.addEventListener('click', function() {
+    // Manejar clics en los botones de línea
+    document.querySelectorAll('.linea-btn').forEach(button => {
+        button.addEventListener('click', function() {
             const lineaId = this.getAttribute('data-linea');
-            mostrarSeccion(lineaId);
+            
+            // Remover la clase active de todos los botones
+            document.querySelectorAll('.linea-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Remover la clase active de todas las secciones
+            document.querySelectorAll('.linea-info').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Activar el botón y la sección correspondiente
+            this.classList.add('active');
+            const seccionActiva = document.getElementById(lineaId);
+            seccionActiva.classList.add('active');
+            
+            // Actualizar la URL con el hash correspondiente
+            window.location.hash = lineaId;
+            
+            // Hacer scroll suave hasta la parte superior de la sección
+            window.scrollTo({
+                top: seccionActiva.offsetTop - 200, // Aumentado el offset para ir más arriba
+                behavior: 'smooth'
+            });
         });
     });
-
-    // Mostrar la primera sección por defecto
-    if (botones.length > 0) {
-        const primeraLinea = botones[0].getAttribute('data-linea');
-        mostrarSeccion(primeraLinea);
-    }
 }); 

@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metalúrgica Breques - Inicio</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -14,6 +19,8 @@
     
     <script src="js/loadHeader.js"></script>
     <script src="js/mobile-menu.js"></script>
+    <script src="js/carrusel.js"></script>
+    <script src="js/productos.js"></script>
 
 
     
@@ -66,67 +73,59 @@
         <div class="carrusel-contenedor">
             <button class="carrusel-btn prev">❮</button>
             <div class="carrusel">
-                <a href="lineas.html" class="tarjeta-producto">
-                    <img src="img/ejemplo.jpg" alt="Línea Herrero">
+                <a href="lineas.html#modena" class="tarjeta-producto">
+                    <img src="img/modena.jpg" alt="Línea Módena">
                     <div class="tarjeta-contenido">
                         <h3>Línea Módena</h3>
-                        <p>Diseño clásico y resistente. Ideal para proyectos residenciales y comerciales.</p>
+                        <p>Versátil y confiable. Ideal para viviendas y locales de uso medio.</p>
                         <button class="btn-ver-mas">Ver más</button>
                     </div>
                 </a>
-                <a href="lineas.html" class="tarjeta-producto">
-                    <img src="img/ejemplo.jpg" alt="Línea Modena">
-                    <div class="tarjeta-contenido">
-                        <h3>Línea HA110</h3>
-                        <p>Alta prestación, aislamiento térmico y acústico. Perfecta para grandes obras.</p>
-                        <button class="btn-ver-mas">Ver más</button>
-                    </div>
-                </a>
-                <a href="lineas.html" class="tarjeta-producto">
+                <a href="lineas.html#a30" class="tarjeta-producto">
                     <img src="img/ejemplo.jpg" alt="Línea A-30">
                     <div class="tarjeta-contenido">
-                        <h3>Línea PVC</h3>
-                        <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
+                        <h3>Línea A-30</h3>
+                        <p>Alta prestación con excelente aislación térmica y acústica.</p>
                         <button class="btn-ver-mas">Ver más</button>
                     </div>
                 </a>
-                <a href="lineas.html" class="tarjeta-producto">
+                <a href="lineas.html#a40" class="tarjeta-producto">
                     <img src="img/ejemplo.jpg" alt="Línea A-40">
                     <div class="tarjeta-contenido">
-                        <h3>Línea PVC</h3>
-                        <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
+                        <h3>Línea A-40</h3>
+                        <p>Máxima eficiencia para obras premium con grandes exigencias técnicas.</p>
                         <button class="btn-ver-mas">Ver más</button>
                     </div>
                 </a>
-                <a href="lineas.html" class="tarjeta-producto">
-                    <img src="img/ejemplo.jpg" alt="Línea NIZA">
+                <a href="lineas.html#mediterranea" class="tarjeta-producto">
+                    <img src="img/mediterranea.jpg" alt="Línea Mediterránea">
                     <div class="tarjeta-contenido">
-                        <h3>Línea PVC</h3>
-                        <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
+                        <h3>Línea Mediterránea</h3>
+                        <p>Solución moderna y económica para aberturas de todo tipo.</p>
                         <button class="btn-ver-mas">Ver más</button>
                     </div>
                 </a>
-                <a href="lineas.html" class="tarjeta-producto">
-                    <img src="img/ejemplo.jpg" alt="Línea Mediterranea RPT M-3">
+                <a href="lineas.html#mediterranea-rpt" class="tarjeta-producto">
+                    <img src="img/mediterranearpt.jpg" alt="Línea Mediterránea RPT">
                     <div class="tarjeta-contenido">
-                        <h3>Línea PVC</h3>
-                        <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
+                        <h3>Línea Mediterránea RPT</h3>
+                        <p>Mayor aislamiento térmico con tecnología de Ruptura de Puente Térmico.</p>
                         <button class="btn-ver-mas">Ver más</button>
                     </div>
                 </a>
-                <a href="lineas.html" class="tarjeta-producto">
-                    <img src="img/ejemplo.jpg" alt="Línea Línea Mediterranea RPT M-5">
+                <a href="lineas.html#niza" class="tarjeta-producto">
+                    <img src="img/niza.jpg" alt="Línea Niza">
                     <div class="tarjeta-contenido">
-                        <h3>Línea PVC</h3>
-                        <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
+                        <h3>Línea Niza</h3>
+                        <p>Perfiles delgados y diseño minimalista para espacios modernos.</p>
                         <button class="btn-ver-mas">Ver más</button>
                     </div>
                 </a>
-                <a href="lineas.html" class="tarjeta-producto">
-                    <img src="img/ejemplo.jpg" alt="Línea Línea Mediterranea RPT M-7">
+                <a href="lineas.html#frentes" class="tarjeta-producto">
+                    <img src="img/ejemplo.jpg" alt="Línea Frentes">
                     <div class="tarjeta-contenido">
-                        <h3>Línea PVC</h3>
-                        <p>En desarrollo: eficiencia energética, hermeticidad y diseño moderno.</p>
+                        <h3>Línea Frentes</h3>
+                        <p>Fachadas vidriadas con diseño integral, vidriado o frame.</p>
                         <button class="btn-ver-mas">Ver más</button>
                     </div>
                 </a>
@@ -136,6 +135,66 @@
     </div>
 </section>
 
+<!-- Sección de Otras Soluciones -->
+<section class="otras-soluciones">
+    <div class="soluciones-container">
+        <h2>Otras Soluciones</h2>
+        <p class="soluciones-descripcion">Complementamos nuestra oferta con soluciones personalizadas para cada proyecto</p>
+        
+        <div class="soluciones-grid">
+            <!-- Barandas -->
+            <div class="solucion-card">
+                <div class="solucion-imagen">
+                    <img src="img/barandaA.jpeg" alt="Barandas de Aluminio">
+                </div>
+                <div class="solucion-contenido">
+                    <h3>Barandas de Aluminio</h3>
+                    <p>Diseñamos y fabricamos barandas de aluminio a medida, combinando seguridad y estética. Nuestras barandas son ideales para balcones, terrazas y escaleras, ofreciendo durabilidad y bajo mantenimiento.</p>
+                    <ul class="solucion-caracteristicas">
+                        <li><i class="fas fa-check"></i> Diseño personalizado</li>
+                        <li><i class="fas fa-check"></i> Materiales de alta calidad</li>
+                        <li><i class="fas fa-check"></i> Instalación profesional</li>
+                    </ul>
+                    <a href="contacto.html" class="btn-solucion">Consultar</a>
+                </div>
+            </div>
+
+            <!-- Parasoles -->
+            <div class="solucion-card">
+                <div class="solucion-imagen">
+                    <img src="img/parasoles.jpg" alt="Parasoles">
+                </div>
+                <div class="solucion-contenido">
+                    <h3>Parasoles</h3>
+                    <p>Sistemas de parasoles que combinan funcionalidad y diseño. Nuestras soluciones ayudan a controlar la entrada de luz solar, mejorando el confort térmico y reduciendo el consumo energético.</p>
+                    <ul class="solucion-caracteristicas">
+                        <li><i class="fas fa-check"></i> Control solar eficiente</li>
+                        <li><i class="fas fa-check"></i> Diseño moderno</li>
+                        <li><i class="fas fa-check"></i> Múltiples configuraciones</li>
+                    </ul>
+                    <a href="contacto.html" class="btn-solucion">Consultar</a>
+                </div>
+            </div>
+
+            <!-- Mamparas -->
+            <div class="solucion-card">
+                <div class="solucion-imagen">
+                    <img src="img/mampara1.jpg" alt="Mamparas">
+                </div>
+                <div class="solucion-contenido">
+                    <h3>Mamparas</h3>
+                    <p>Mamparas de aluminio y vidrio para dividir espacios de manera elegante y funcional. Ideales para oficinas, comercios y espacios residenciales que requieren privacidad y luminosidad.</p>
+                    <ul class="solucion-caracteristicas">
+                        <li><i class="fas fa-check"></i> Vidrio templado de seguridad</li>
+                        <li><i class="fas fa-check"></i> Sistemas corredizos o fijos</li>
+                        <li><i class="fas fa-check"></i> Instalación profesional</li>
+                    </ul>
+                    <a href="contacto.html" class="btn-solucion">Consultar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Footer -->
 <footer class="footer">
@@ -144,6 +203,5 @@
     </div>
 </footer>
 
-    <script src="js/carrusel.js"></script>
 </body>
 </html>

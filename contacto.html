@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metalúrgica Breques - Contacto</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -18,84 +20,50 @@
         <h1>Contáctanos</h1>
         
         <div class="contacto-grid">
-            <!-- Formulario de contacto -->
-            <section class="formulario-contacto">
-                <h2>Envíanos un mensaje</h2>
-                <form id="contacto-form" class="contacto-form">
-                    <div class="form-group">
-                        <label for="nombre">Nombre completo *</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="consulta">Tipo de consulta *</label>
-                        <select id="consulta" name="consulta" required>
-                            <option value="">Seleccione una opción</option>
-                            <option value="presupuesto">Solicitud de presupuesto</option>
-                            <option value="informacion">Información general</option>
-                            <option value="reclamo">Reclamo o sugerencia</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje *</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn-enviar">Enviar mensaje</button>
-                </form>
-            </section>
+            <!-- Sección izquierda: Formulario y Mapa -->
+            <div class="contacto-izquierda">
+                <!-- Formulario de contacto -->
+                <section class="formulario-contacto">
+                    <h2>Envíanos un mensaje</h2>
+                    <form id="contacto-form" class="contacto-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo *</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
 
-            <!-- Información de contacto -->
-            <section class="info-contacto">
-                <div class="info-card">
-                    <h2>Información de contacto</h2>
-                    
-                    <div class="info-item">
-                        <i class="icono-location"></i>
-                        <div>
-                            <h3>Dirección</h3>
-                            <p>Saavedra 2340, Esperanza, Santa Fe</p>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="consulta">Tipo de consulta *</label>
+                                <select id="consulta" name="consulta" required>
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="presupuesto">Solicitud de presupuesto</option>
+                                    <option value="informacion">Información general</option>
+                                    <option value="reclamo">Reclamo o sugerencia</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <i class="icono-phone"></i>
-                        <div>
-                            <h3>Teléfonos</h3>
-                            <p>+54 3496 444030</p>
-                            <p>+54 3496 443618</p>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
                         </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <i class="icono-email"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>ventas@metalurgicabreques.com.ar</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <i class="icono-time"></i>
-                        <div>
-                            <h3>Horarios de atención</h3>
-                            <p>Lunes a Jueves: 7:00 - 16:00</p>
-                            <p>Viernes: 7:00 - 15:00</p>
-                        </div>
-                    </div>
-                </div>
+                        
+                        <button type="submit" class="btn-enviar">Enviar mensaje</button>
+                    </form>
+                </section>
 
                 <!-- Mapa -->
                 <div class="mapa-container">
@@ -111,6 +79,50 @@
                         </iframe>
                     </div>
                 </div>
+            </div>
+
+            <!-- Sección derecha: Información de contacto y redes -->
+            <div class="contacto-derecha">
+                <!-- Información de contacto -->
+                <section class="info-contacto">
+                    <div class="info-card">
+                        <h2>Información de contacto</h2>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Dirección</h3>
+                                <p>Saavedra 2340, Esperanza, Santa Fe</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Teléfonos</h3>
+                                <p>+54 3496 444030</p>
+                                <p>+54 3496 443618</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>ventas@metalurgicabreques.com.ar</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Horarios de atención</h3>
+                                <p>Lunes a Jueves: 7:00 - 16:00</p>
+                                <p>Viernes: 7:00 - 15:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 <!-- Redes sociales -->
                 <div class="redes-sociales">
@@ -127,7 +139,7 @@
                         </a>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
     </main>
 

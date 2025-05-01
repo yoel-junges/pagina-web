@@ -1,31 +1,51 @@
 document.addEventListener('DOMContentLoaded', function() {
     const formulario = document.getElementById('contacto-form');
     
-    formulario.addEventListener('submit', function(e) {
+    formulario.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        // Validar campos requeridos
-        const nombre = document.getElementById('nombre').value;
-        const email = document.getElementById('email').value;
-        const consulta = document.getElementById('consulta').value;
-        const mensaje = document.getElementById('mensaje').value;
+        // Obtener los valores del formulario
+        const formData = {
+            nombre: document.getElementById('nombre').value,
+            email: document.getElementById('email').value,
+            telefono: document.getElementById('telefono').value,
+            consulta: document.getElementById('consulta').value,
+            mensaje: document.getElementById('mensaje').value
+        };
         
-        if (!nombre || !email || !consulta || !mensaje) {
-            alert('Por favor, complete todos los campos requeridos.');
-            return;
+        try {
+            // Mostrar mensaje de carga
+            const botonEnviar = document.querySelector('.btn-enviar');
+            const textoOriginal = botonEnviar.textContent;
+            botonEnviar.textContent = 'Enviando...';
+            botonEnviar.disabled = true;
+            
+            // Enviar los datos al backend
+            const response = await fetch('/api/contacto', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            if (response.ok) {
+                // Mostrar mensaje de éxito
+                alert('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.');
+                formulario.reset();
+            } else {
+                throw new Error('Error al enviar el mensaje');
+            }
+        } catch (error) {
+            // Mostrar mensaje de error
+            alert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.');
+            console.error('Error:', error);
+        } finally {
+            // Restaurar el botón
+            const botonEnviar = document.querySelector('.btn-enviar');
+            botonEnviar.textContent = 'Enviar mensaje';
+            botonEnviar.disabled = false;
         }
-        
-        // Validar formato de email
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Por favor, ingrese un email válido.');
-            return;
-        }
-        
-        // Aquí iría la lógica para enviar el formulario
-        // Por ahora solo mostramos un mensaje de éxito
-        alert('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.');
-        formulario.reset();
     });
     
     // Efecto de hover en los campos del formulario

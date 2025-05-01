@@ -1,0 +1,91 @@
+.galeria-obras {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.galeria-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.galeria-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.galeria-descripcion {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.galeria-masonry {
+    columns: 3;
+    column-gap: 20px;
+    padding: 20px;
+}
+
+.galeria-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover {
+    transform: translateY(-5px);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.galeria-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.galeria-item:hover .galeria-overlay {
+    opacity: 1;
+}
+
+.galeria-overlay span {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+    .galeria-masonry {
+        columns: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .galeria-masonry {
+        columns: 1;
+    }
+    
+    .galeria-obras {
+        padding: 2rem 1rem;
+    }
+    
+    .galeria-container h2 {
+        font-size: 2rem;
+    }
+} 
