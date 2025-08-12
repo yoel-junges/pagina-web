@@ -10,12 +10,10 @@ body {
     line-height: 1.6;
     color: #333;
     padding-top: 60px; /* Espacio para el header fijo */
-}
-
-/* Estilos generales */
-body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Estilos del Header */
@@ -226,12 +224,11 @@ body {
 /* Ajuste del contenido principal para el header fijo */
 main {
     margin-top: 90px;
-}
-
-/* Secciones */
-main {
     padding: 40px 20px;
     text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 section {
@@ -457,6 +454,10 @@ section {
     padding: 30px 10px;
     margin-top: 40px;
     font-size: 14px;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    clear: both;
 }
 
 .footer a {
@@ -477,6 +478,7 @@ section {
 
 .bienvenida h1 {
     font-size: 32px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
@@ -708,12 +710,22 @@ section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .lineas-container h1 {
     text-align: center;
+    margin-top: 40px;
     margin-bottom: 40px;
     color: #333;
+}
+
+.lineas-contenido {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .lineas-nav {
@@ -857,23 +869,6 @@ section {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-@media (max-width: 768px) {
-    .galeria-grid {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-    }
-    
-    .galeria-grid img {
-        height: 350px;
-    }
-}
-
-@media (max-width: 480px) {
-    .galeria-grid img {
-        height: 300px;
-    }
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -898,6 +893,57 @@ section {
     
     .galeria-grid {
         grid-template-columns: 1fr;
+        max-width: 100%;
+        gap: 25px;
+        padding: 0 15px;
+    }
+    
+    .galeria-grid img {
+        height: auto;
+        min-height: 250px;
+        max-height: 400px;
+        object-fit: contain;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria-grid {
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    .galeria-grid img {
+        min-height: 200px;
+        max-height: 350px;
+        border-radius: 10px;
+    }
+}
+
+/* Estilos específicos para galerías con muchas imágenes (como A-40) */
+@media (max-width: 768px) {
+    .galeria-grid:has(img[src*="A40"]) {
+        gap: 30px;
+    }
+    
+    .galeria-grid:has(img[src*="A40"]) img {
+        min-height: 280px;
+        max-height: 450px;
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria-grid:has(img[src*="A40"]) {
+        gap: 25px;
+    }
+    
+    .galeria-grid:has(img[src*="A40"]) img {
+        min-height: 220px;
+        max-height: 380px;
+        border-radius: 12px;
     }
 }
 
@@ -910,6 +956,7 @@ section {
 
 .contacto-container h1 {
     text-align: center;
+    margin-top: 40px;
     margin-bottom: 40px;
     color: #333;
     font-size: 2.5rem;
@@ -1676,5 +1723,173 @@ section {
     .frente-caracteristicas li {
         font-size: 1em;
     }
+}
+
+/* Estilos para el carrusel de frentes */
+.carrusel-frente {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carrusel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carrusel-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    transform: scale(1.05);
+}
+
+.carrusel-img.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.carrusel-img:hover {
+    transform: scale(1.02);
+}
+
+.carrusel-img.active {
+    opacity: 1;
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carrusel-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carrusel-btn.carrusel-prev {
+    left: 10px;
+}
+
+.carrusel-btn.carrusel-next {
+    right: 10px;
+}
+
+.carrusel-btn i {
+    transition: transform 0.3s ease;
+}
+
+.carrusel-btn:hover i {
+    transform: scale(1.2);
+}
+
+/* Indicadores del carrusel */
+.carrusel-indicadores {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicador:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+}
+
+.indicador.active {
+    background: #ff6600;
+    transform: scale(1.1);
+}
+
+/* Responsive para el carrusel */
+@media (max-width: 768px) {
+    .carrusel-frente {
+        height: 250px;
+    }
+    
+    .carrusel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carrusel-frente {
+        height: 200px;
+    }
+    
+    .carrusel-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+}
+
+/* Asegurar que el footer esté siempre visible */
+.footer {
+    margin-top: auto;
+    position: relative;
+    z-index: 10;
+}
+
+/* Estilos específicos para la página de líneas */
+body:has(.lineas-container) .footer {
+    position: relative;
+    margin-top: 50px;
+    clear: both;
+    display: block;
+}
+
+/* Alternativa para navegadores que no soportan :has() */
+.lineas-container + .footer {
+    position: relative;
+    margin-top: 50px;
+    clear: both;
+    display: block;
+}
+
+/* Forzar visualización del footer en la página de líneas */
+.lineas-container ~ .footer {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    margin-top: 50px !important;
 }
 

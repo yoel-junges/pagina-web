@@ -14,5 +14,12 @@
 
 
 
-Modena(delta plus)LISTA , a-30(alfa) FALTA FOTOS, a-40 FALTA FOTOS, mediterranea LISTA, mediterranea rpt LISTA, niza LISTA , frentes(integral, vidriado y frame) LISTA
-otras soluciones (barandas, mamparas y parasoles) LISTA
+nuevo:
+GMAIL ver de enlazarlo
+
+ver en formato celular (modulo a40 imagenes se cortan la parte de abajo y el titulo en el modulo nuestros productos)
+ver footer los signos de insta face y wpp
+
+futuro:
+frentes: 
+-agregar una foto real de cada frente

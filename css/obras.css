@@ -5,157 +5,218 @@
     padding: 40px 20px;
 }
 
-.obras-container h1 {
+/* Vista Principal */
+.vista-principal {
     text-align: center;
-    margin-bottom: 40px;
+}
+
+.vista-principal h1 {
+    margin-top: 40px;
+    margin-bottom: 20px;
     color: #333;
+    font-size: 2.5em;
 }
 
-/* Filtros */
-.filtros {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-}
-
-.filtro-btn {
-    padding: 10px 20px;
-    background-color: #f5f5f5;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 500;
+.descripcion-principal {
     color: #666;
-    transition: all 0.3s ease;
+    font-size: 1.2em;
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.filtro-btn:hover {
-    background-color: #e0e0e0;
-}
-
-.filtro-btn.active {
-    background-color: #ff6600;
-    color: white;
-}
-
-/* Grid de obras */
-.obras-grid {
+/* Tarjetas de Selección */
+.tarjetas-seleccion {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.obra-card {
+.tarjeta-seleccion {
     background: white;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.obra-card:hover {
+.tarjeta-seleccion:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.tarjeta-seleccion:active {
     transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-.obra-imagen {
+.tarjeta-imagen {
     position: relative;
     height: 250px;
     overflow: hidden;
 }
 
-.obra-imagen img {
+.tarjeta-imagen img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.obra-card:hover .obra-imagen img {
-    transform: scale(1.05);
+.tarjeta-seleccion:hover .tarjeta-imagen img {
+    transform: scale(1.1);
 }
 
-.obra-overlay {
+.tarjeta-overlay {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    padding: 20px;
-    color: white;
-}
-
-.obra-overlay h3 {
-    margin: 0;
-    font-size: 1.2em;
-}
-
-.obra-overlay p {
-    margin: 5px 0 0;
-    font-size: 0.9em;
-    opacity: 0.9;
-}
-
-.obra-info {
-    padding: 20px;
-}
-
-.obra-info h2 {
-    margin: 0 0 10px;
-    color: #333;
-    font-size: 1.3em;
-}
-
-.obra-info p {
-    color: #666;
-    margin-bottom: 15px;
-    line-height: 1.5;
-}
-
-.obra-caracteristicas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.obra-caracteristicas span {
-    background: #f5f5f5;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 0.9em;
-    color: #666;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
     display: flex;
     align-items: center;
-    gap: 5px;
+    justify-content: center;
+    transition: background 0.3s ease;
 }
 
-.obra-caracteristicas i {
-    color: #ff6600;
+.tarjeta-overlay i {
+    font-size: 3em;
+    color: white;
+    opacity: 0.8;
 }
 
-/* Media queries */
-@media (max-width: 768px) {
-    .filtros {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .filtro-btn {
-        width: 100%;
-        max-width: 200px;
-    }
-    
-    .obras-grid {
-        grid-template-columns: 1fr;
-    }
+.tarjeta-seleccion:hover .tarjeta-overlay {
+    background: rgba(0,0,0,0.5);
 }
 
-/* Estilos para la galería de obras */
+.tarjeta-contenido {
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 250px;
+    position: relative;
+}
+
+.tarjeta-contenido h2 {
+    margin: 0 0 12px;
+    color: #333;
+    font-size: 1.8em;
+}
+
+.tarjeta-contenido p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 1.1em;
+    text-align: center;
+    max-width: 100%;
+}
+
+.btn-ver-obras {
+    background: linear-gradient(135deg, #ff6600, #ff8533);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: auto;
+    min-width: 180px;
+    text-decoration: none;
+    line-height: 1.2;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-ver-obras:hover {
+    background: linear-gradient(135deg, #e55a00, #ff6600);
+    /* transform: translateY(-2px); */
+    box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
+}
+
+.btn-ver-obras i {
+    transition: transform 0.3s ease;
+}
+
+/* Eliminando la animación del ícono que se mueve */
+/* .btn-ver-obras:hover i {
+    transform: translateX(5px);
+} */
+
+/* Vistas de Obras */
+.vista-obras {
+    animation: fadeIn 0.5s ease;
+}
+
+.vista-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    margin-top: 40px;
+}
+
+.vista-categoria {
+    margin-top: 40px;
+}
+
+.btn-volver {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #f5f5f5;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-volver:hover {
+    background: #e0e0e0;
+    color: #333;
+}
+
+.vista-header h1 {
+    margin: 0 0 15px;
+    color: #333;
+    font-size: 2.5em;
+}
+
+.vista-header p {
+    color: #666;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Galería de Obras */
 .galeria-obras {
     background-color: #f9f9f9;
-    padding: 60px 20px;
+    padding: 40px 20px;
+    border-radius: 15px;
 }
 
 .galeria-container {
@@ -163,22 +224,9 @@
     margin: 0 auto;
 }
 
-.galeria-container h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.galeria-descripcion {
-    text-align: center;
-    color: #666;
-    margin-bottom: 40px;
-    font-size: 1.1em;
-}
-
 .galeria-masonry {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
     padding: 20px 0;
 }
@@ -192,53 +240,200 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover {
+    transform: scale(1.02);
 }
 
 .galeria-item img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
     transition: transform 0.3s ease;
-}
-
-.galeria-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    padding: 15px;
-    color: white;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.galeria-item:hover .galeria-overlay {
-    opacity: 1;
 }
 
 .galeria-item:hover img {
     transform: scale(1.05);
 }
 
-.galeria-overlay span {
-    font-size: 1.1em;
-    font-weight: 500;
+/* Modal de Imagen */
+.modal-imagen {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
 }
 
-/* Media queries para la galería */
+.modal-contenido {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.cerrar-modal:hover {
+    color: #ff6600;
+}
+
+.modal-imagen-img {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media queries */
+@media (min-width: 769px) {
+    .tarjetas-seleccion {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media (max-width: 768px) {
+    .obras-container {
+        padding: 20px 15px;
+    }
+    
+    .vista-principal h1 {
+        font-size: 2em;
+    }
+    
+    .descripcion-principal {
+        font-size: 1.1em;
+        margin-bottom: 30px;
+    }
+    
+    .tarjetas-seleccion {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    .tarjeta-contenido {
+        padding: 25px 20px;
+    }
+    
+    .tarjeta-contenido h2 {
+        font-size: 1.5em;
+    }
+    
+    .btn-ver-obras {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    
+    .vista-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .btn-volver {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin-bottom: 20px;
+        display: inline-flex;
+    }
+    
+    .vista-header h1 {
+        font-size: 2em;
+    }
+    
     .galeria-masonry {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+    }
+    
+    .galeria-obras {
+        padding: 30px 15px;
+    }
+    
+    /* En móviles, las fotos se muestran completas sin cortarse */
+    .galeria-masonry .galeria-item img {
+        object-fit: contain !important;
+        max-height: 300px !important;
+        background-color: #f8f8f8 !important;
+        height: auto !important;
     }
 }
 
 @media (max-width: 480px) {
+    .vista-principal h1 {
+        font-size: 1.8em;
+    }
+    
+    .descripcion-principal {
+        font-size: 1em;
+    }
+    
+    .tarjeta-contenido h2 {
+        font-size: 1.3em;
+    }
+    
+    .tarjeta-contenido p {
+        font-size: 1em;
+    }
+    
+    .btn-ver-obras {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .vista-header h1 {
+        font-size: 1.8em;
+    }
+    
     .galeria-masonry {
         grid-template-columns: 1fr;
     }
     
     .galeria-item {
-        max-height: 300px;
+        max-height: none;
+    }
+    
+    /* En móviles pequeños, las fotos se muestran completas */
+    .galeria-masonry .galeria-item img {
+        object-fit: contain !important;
+        max-height: 250px !important;
+        background-color: #f8f8f8 !important;
+        height: auto !important;
     }
 } 
