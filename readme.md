@@ -14,12 +14,6 @@
 
 
 
-nuevo:
-GMAIL ver de enlazarlo
 
-ver en formato celular (modulo a40 imagenes se cortan la parte de abajo y el titulo en el modulo nuestros productos)
-ver footer los signos de insta face y wpp
 
-futuro:
-frentes: 
--agregar una foto real de cada frente
+
