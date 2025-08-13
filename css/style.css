@@ -1893,3 +1893,77 @@ body:has(.lineas-container) .footer {
     margin-top: 50px !important;
 }
 
+/* ===== ESTILOS DE ACCESIBILIDAD ===== */
+
+/* Skip link para navegación por teclado */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: -999px;
+    background: #fff;
+    color: #000;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 4px;
+    font-weight: 600;
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    outline: none;
+}
+
+/* Indicadores de foco visibles para enlaces y botones */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #ff6600;
+    outline-offset: 2px;
+}
+
+/* Mejorar contraste de foco para elementos interactivos */
+.nav-link:focus {
+    outline: 2px solid #ff6600;
+    outline-offset: 2px;
+    background-color: rgba(255, 102, 0, 0.1);
+}
+
+.btn-hero:focus,
+.btn-solucion:focus,
+.btn-enviar:focus {
+    outline: 2px solid #000;
+    outline-offset: 3px;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Foco para elementos del carrusel */
+.carrusel-btn:focus {
+    outline: 2px solid #ff6600;
+    outline-offset: 2px;
+    background-color: rgba(255, 102, 0, 0.2);
+}
+
+/* Foco para indicadores del carrusel */
+.indicador:focus {
+    outline: 2px solid #ff6600;
+    outline-offset: 2px;
+    background: rgba(255, 102, 0, 0.8);
+}
+
+/* Foco para campos del formulario */
+.contacto-form input:focus,
+.contacto-form select:focus,
+.contacto-form textarea:focus {
+    outline: 2px solid #ff6600;
+    outline-offset: 2px;
+    border-color: #ff6600;
+    box-shadow: 0 0 0 2px rgba(255, 102, 0, 0.2);
+}
+

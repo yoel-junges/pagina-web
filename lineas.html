@@ -49,30 +49,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Skip link para accesibilidad -->
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
     <!-- Encabezado reutilizable -->
     <div id="header-placeholder"></div>
     
     <script src="js/loadHeader.js"></script>
     <script src="js/mobile-menu.js"></script>
 
-    <main class="lineas-container">
+    <main id="contenido" class="lineas-container">
         <h1>Nuestras Líneas de Aberturas</h1>
         
         <!-- Navegación de líneas -->
-        <nav class="lineas-nav">
-            <button class="linea-btn active" data-linea="modena">Línea Módena</button>
-            <button class="linea-btn" data-linea="a30">Línea A-30</button>
-            <button class="linea-btn" data-linea="a40">Línea A-40</button>
-            <button class="linea-btn" data-linea="mediterranea">Línea Mediterránea</button>
-            <button class="linea-btn" data-linea="mediterranea-rpt">Línea Mediterránea RPT</button>
-            <button class="linea-btn" data-linea="niza">Línea Niza</button>
-            <button class="linea-btn" data-linea="frentes">Fachadas</button>
+        <nav class="lineas-nav" role="tablist" aria-label="Líneas de aberturas">
+            <button class="linea-btn active" id="tab-modena" role="tab" aria-selected="true" aria-controls="modena">Línea Módena</button>
+            <button class="linea-btn" id="tab-a30" role="tab" aria-selected="false" aria-controls="a30" tabindex="-1">Línea A-30</button>
+            <button class="linea-btn" id="tab-a40" role="tab" aria-selected="false" aria-controls="a40" tabindex="-1">Línea A-40</button>
+            <button class="linea-btn" id="tab-mediterranea" role="tab" aria-selected="false" aria-controls="mediterranea" tabindex="-1">Línea Mediterránea</button>
+            <button class="linea-btn" id="tab-mediterranea-rpt" role="tab" aria-selected="false" aria-controls="mediterranea-rpt" tabindex="-1">Línea Mediterránea RPT</button>
+            <button class="linea-btn" id="tab-niza" role="tab" aria-selected="false" aria-controls="niza" tabindex="-1">Línea Niza</button>
+            <button class="linea-btn" id="tab-frentes" role="tab" aria-selected="false" aria-controls="frentes" tabindex="-1">Fachadas</button>
         </nav>
 
         <!-- Contenido de las líneas -->
         <div class="lineas-contenido">
             <!-- Línea Módena -->
-            <section class="linea-info active" id="modena">
+            <section class="linea-info active" id="modena" role="tabpanel" aria-labelledby="tab-modena">
                 <div class="linea-header">
                     <h2>Línea Módena</h2>
                     <p class="linea-descripcion">La línea Módena es una de las más utilizadas en el mercado. Está pensada para aplicaciones residenciales y comerciales livianas, y se destaca por su versatilidad y facilidad de adaptación a distintos tipos de aberturas: ventanas, puertas, paños fijos, entre otros.</p>
@@ -111,7 +114,7 @@
             </section>
 
             <!-- Línea A-30 -->
-            <section class="linea-info" id="a30">
+            <section class="linea-info" id="a30" role="tabpanel" aria-labelledby="tab-a30" hidden>
                 <div class="linea-header">
                     <h2>Línea A-30</h2>
                     <p class="linea-descripcion">La línea A-30 es una línea de alta prestación desarrollada por Aluar, pensada para responder a mayores exigencias de aislamiento térmico, acústico y resistencia estructural. Se utiliza mucho en viviendas premium, edificios de media y gran altura, y obras con exigencias técnicas importantes.
@@ -153,7 +156,7 @@
             </section>
 
             <!-- Línea A-40 -->
-            <section class="linea-info" id="a40">
+            <section class="linea-info" id="a40" role="tabpanel" aria-labelledby="tab-a40" hidden>
                 <div class="linea-header">
                     <h2>Línea A-40</h2>
                     <p class="linea-descripcion">La A-40 es una línea superior a la A-30, también desarrollada por Aluar, y está diseñada para brindar máximo rendimiento térmico, acústico y estructural. Se utiliza en obras de alta exigencia técnica, como viviendas de alto estándar, torres, edificios institucionales y proyectos sustentables.
@@ -200,7 +203,7 @@
             </section>
 
             <!-- Línea Mediterránea -->
-            <section class="linea-info" id="mediterranea">
+            <section class="linea-info" id="mediterranea" role="tabpanel" aria-labelledby="tab-mediterranea" hidden>
                 <div class="linea-header">
                     <h2>Línea Mediterránea</h2>
                     <p class="linea-descripcion">La línea Mediterránea se caracteriza por sus formas curvas y perfiles con base de apoyo de 60 mm. Ofrece soluciones eficientes para aberturas de diversas dimensiones, desde convencionales hasta grandes, manteniendo una estética moderna y atractiva</p>
@@ -240,7 +243,7 @@
             </section>
 
             <!-- Línea Mediterránea RPT -->
-            <section class="linea-info" id="mediterranea-rpt">
+            <section class="linea-info" id="mediterranea-rpt" role="tabpanel" aria-labelledby="tab-mediterranea-rpt" hidden>
                 <div class="linea-header">
                     <h2>Línea Mediterránea RPT</h2>
                     <p class="linea-descripcion">La Línea Mediterránea RPT está diseñada para quienes buscan un equilibrio entre estética moderna, eficiencia térmica y alto rendimiento. Integra perfiles con ruptura de puente térmico, lo que permite separar la cara interior y exterior del perfil de aluminio mediante una varilla aislante (generalmente de poliamida), reduciendo la transmisión de temperatura y condensación.
@@ -285,7 +288,7 @@
             </section>
 
             <!-- Línea Niza -->
-            <section class="linea-info" id="niza">
+            <section class="linea-info" id="niza" role="tabpanel" aria-labelledby="tab-niza" hidden>
                 <div class="linea-header">
                     <h2>Línea Niza</h2>
                     <p class="linea-descripcion">La Línea Niza es un sistema de aberturas de aluminio de media y alta prestación, pensado para quienes buscan una estética más liviana y minimalista, sin resignar funcionalidad. Está diseñada especialmente para espacios modernos y luminosos, donde se prioriza la superficie vidriada y la discreción visual de los perfiles.
@@ -329,7 +332,7 @@
             </section>
 
             <!-- Línea Frentes -->
-            <section class="linea-info" id="frentes">
+            <section class="linea-info" id="frentes" role="tabpanel" aria-labelledby="tab-frentes" hidden>
                 <div class="linea-header">
                     <h2>Fachadas</h2>
                     <p class="linea-descripcion">Sistema especializado para frentes de locales comerciales y edificios. Ofrecemos tres soluciones adaptables: <strong>Integral, Vidriado y Frame</strong>, cada una diseñada para responder a distintas exigencias estéticas, técnicas y de seguridad.</p>
@@ -342,20 +345,20 @@
                             <h3>Frente Integral</h3>
                             <div class="frente-detalle">
                                 <div class="frente-imagen">
-                                    <div class="carrusel-frente" data-tipo="integral">
-                                        <div class="carrusel-container">
+                                    <div class="carrusel-frente" data-tipo="integral" role="region" aria-roledescription="carrusel" aria-label="Galería Frente Integral">
+                                        <div class="carrusel-container" aria-live="polite">
                                             <img src="img/integral.jpg" alt="Frente Integral" class="carrusel-img active" loading="lazy" decoding="async">
-                                            <img src="img/integral1.jpg" alt="Frente Integral - Vista adicional" class="carrusel-img" loading="lazy" decoding="async">
+                                            <img src="img/integral1.jpg" alt="Frente Integral - Vista adicional" class="carrusel-img" loading="lazy" decoding="async" aria-hidden="true">
                                         </div>
-                                        <button class="carrusel-btn carrusel-prev" onclick="cambiarImagen('integral', -1)">
+                                        <button class="carrusel-btn carrusel-prev" type="button" aria-label="Imagen anterior" onclick="cambiarImagen('integral', -1)">
                                             <i class="fas fa-chevron-left"></i>
                                         </button>
-                                        <button class="carrusel-btn carrusel-next" onclick="cambiarImagen('integral', 1)">
+                                        <button class="carrusel-btn carrusel-next" type="button" aria-label="Imagen siguiente" onclick="cambiarImagen('integral', 1)">
                                             <i class="fas fa-chevron-right"></i>
                                         </button>
                                         <div class="carrusel-indicadores">
-                                            <span class="indicador active" onclick="irAImagen('integral', 0)"></span>
-                                            <span class="indicador" onclick="irAImagen('integral', 1)"></span>
+                                            <button class="indicador active" type="button" aria-label="Ir a imagen 1" aria-current="true" onclick="irAImagen('integral', 0)"></button>
+                                            <button class="indicador" type="button" aria-label="Ir a imagen 2" onclick="irAImagen('integral', 1)"></button>
                                         </div>
                                     </div>
                                 </div>
@@ -378,20 +381,20 @@
                             <h3>Frente Vidriado</h3>
                             <div class="frente-detalle">
                                 <div class="frente-imagen">
-                                    <div class="carrusel-frente" data-tipo="vidriado">
-                                        <div class="carrusel-container">
+                                    <div class="carrusel-frente" data-tipo="vidriado" role="region" aria-roledescription="carrusel" aria-label="Galería Frente Vidriado">
+                                        <div class="carrusel-container" aria-live="polite">
                                             <img src="img/vidriado.jpg" alt="Frente Vidriado" class="carrusel-img active" loading="lazy" decoding="async">
-                                            <img src="img/vidriado1.png" alt="Frente Vidriado - Vista adicional" class="carrusel-img" loading="lazy" decoding="async">
+                                            <img src="img/vidriado1.png" alt="Frente Vidriado - Vista adicional" class="carrusel-img" loading="lazy" decoding="async" aria-hidden="true">
                                         </div>
-                                        <button class="carrusel-btn carrusel-prev" onclick="cambiarImagen('vidriado', -1)">
+                                        <button class="carrusel-btn carrusel-prev" type="button" aria-label="Imagen anterior" onclick="cambiarImagen('vidriado', -1)">
                                             <i class="fas fa-chevron-left"></i>
                                         </button>
-                                        <button class="carrusel-btn carrusel-next" onclick="cambiarImagen('vidriado', 1)">
+                                        <button class="carrusel-btn carrusel-next" type="button" aria-label="Imagen siguiente" onclick="cambiarImagen('vidriado', 1)">
                                             <i class="fas fa-chevron-right"></i>
                                         </button>
                                         <div class="carrusel-indicadores">
-                                            <span class="indicador active" onclick="irAImagen('vidriado', 0)"></span>
-                                            <span class="indicador" onclick="irAImagen('vidriado', 1)"></span>
+                                            <button class="indicador active" type="button" aria-label="Ir a imagen 1" aria-current="true" onclick="irAImagen('vidriado', 0)"></button>
+                                            <button class="indicador" type="button" aria-label="Ir a imagen 2" onclick="irAImagen('vidriado', 1)"></button>
                                         </div>
                                     </div>
                                 </div>
@@ -439,5 +442,6 @@
     <script src="js/loadFooter.js"></script>
 
     <script src="js/lineas.js"></script>
+    <script src="js/tabs-a11y.js"></script>
 </body>
 </html>

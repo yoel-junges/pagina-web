@@ -53,6 +53,9 @@
 </head>
 <body>
 
+   <!-- Skip link para accesibilidad -->
+   <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
    <!-- Encabezado reutilizable -->
 <div id="header-placeholder"></div>
     
@@ -63,8 +66,10 @@
 
 
     
-    <!-- Sección Hero -->
-    <section class="hero">
+    <!-- Contenido principal -->
+    <main id="contenido">
+        <!-- Sección Hero -->
+        <section class="hero">
         <div class="hero-contenido">
             <h1>Bienvenidos a Metalúrgica Breques</h1>
             <p>Somos una empresa familiar con más de 60 años de trayectoria, especializada en la fabricación e instalación de aberturas de aluminio de alta calidad..</p>
@@ -113,7 +118,7 @@
             <button class="carrusel-btn prev">❮</button>
             <div class="carrusel">
                 <a href="lineas.html#modena" class="tarjeta-producto">
-                    <img src="img/modena.jpg" alt="Línea Módena">
+                                            <img src="img/modena.jpg" alt="Línea Módena" loading="lazy" decoding="async">
                     <div class="tarjeta-contenido">
                         <h3>Línea Módena</h3>
                         <p>Versátil y confiable. Ideal para viviendas y locales de uso medio.</p>
@@ -121,7 +126,7 @@
                     </div>
                 </a>
                 <a href="lineas.html#a30" class="tarjeta-producto">
-                    <img src="img/A30-1.png" alt="Línea A-30">
+                                            <img src="img/A30-1.png" alt="Línea A-30" loading="lazy" decoding="async">
                     <div class="tarjeta-contenido">
                         <h3>Línea A-30</h3>
                         <p>Alta prestación con excelente aislación térmica y acústica.</p>
@@ -129,7 +134,7 @@
                     </div>
                 </a>
                 <a href="lineas.html#a40" class="tarjeta-producto">
-                    <img src="img/A40.png" alt="Línea A-40">
+                                            <img src="img/A40.png" alt="Línea A-40" loading="lazy" decoding="async">
                     <div class="tarjeta-contenido">
                         <h3>Línea A-40</h3>
                         <p>Máxima eficiencia para obras premium con grandes exigencias técnicas.</p>
@@ -137,7 +142,7 @@
                     </div>
                 </a>
                 <a href="lineas.html#mediterranea" class="tarjeta-producto">
-                    <img src="img/mediterranea.jpg" alt="Línea Mediterránea">
+                                            <img src="img/mediterranea.jpg" alt="Línea Mediterránea" loading="lazy" decoding="async">
                     <div class="tarjeta-contenido">
                         <h3>Línea Mediterránea</h3>
                         <p>Solución moderna y económica para aberturas de todo tipo.</p>
@@ -145,7 +150,7 @@
                     </div>
                 </a>
                 <a href="lineas#mediterranea-rpt" class="tarjeta-producto">
-                    <img src="img/mediterranearpt.jpg" alt="Línea Mediterránea RPT">
+                                            <img src="img/mediterranearpt.jpg" alt="Línea Mediterránea RPT" loading="lazy" decoding="async">
                     <div class="tarjeta-contenido">
                         <h3>Línea Mediterránea RPT</h3>
                         <p>Mayor aislamiento térmico con tecnología de Ruptura de Puente Térmico.</p>
@@ -153,7 +158,7 @@
                     </div>
                 </a>
                 <a href="lineas#niza" class="tarjeta-producto">
-                    <img src="img/niza.jpg" alt="Línea Niza">
+                                            <img src="img/niza.jpg" alt="Línea Niza" loading="lazy" decoding="async">
                     <div class="tarjeta-contenido">
                         <h3>Línea Niza</h3>
                         <p>Perfiles delgados y diseño minimalista para espacios modernos.</p>
@@ -161,7 +166,7 @@
                     </div>
                 </a>
                 <a href="lineas#frentes" class="tarjeta-producto">
-                    <img src="img/frentes.jpeg" alt="Fachadas">
+                                            <img src="img/frentes.jpeg" alt="Fachadas" loading="lazy" decoding="async">
                     <div class="tarjeta-contenido">
                         <h3>Fachadas</h3>
                         <p>Fachadas vidriadas con diseño integral, vidriado o frame.</p>
@@ -184,7 +189,7 @@
             <!-- Barandas -->
             <div class="solucion-card">
                 <div class="solucion-imagen">
-                    <img src="img/barandaA.jpeg" alt="Barandas de Aluminio">
+                                            <img src="img/barandaA.jpeg" alt="Barandas de Aluminio" loading="lazy" decoding="async">
                 </div>
                 <div class="solucion-contenido">
                     <h3>Barandas de Aluminio</h3>
@@ -201,7 +206,7 @@
             <!-- Parasoles -->
             <div class="solucion-card">
                 <div class="solucion-imagen">
-                    <img src="img/parasoles.jpg" alt="Parasoles">
+                                            <img src="img/parasoles.jpg" alt="Parasoles" loading="lazy" decoding="async">
                 </div>
                 <div class="solucion-contenido">
                     <h3>Parasoles</h3>
@@ -218,7 +223,7 @@
             <!-- Mamparas -->
             <div class="solucion-card">
                 <div class="solucion-imagen">
-                    <img src="img/mampara1.jpg" alt="Mamparas">
+                                            <img src="img/mampara1.jpg" alt="Mampara1" loading="lazy" decoding="async">
                 </div>
                 <div class="solucion-contenido">
                     <h3>Mamparas</h3>
@@ -233,9 +238,10 @@
             </div>
         </div>
     </div>
-</section>
+        </section>
+    </main>
 
-<!-- Footer -->
+    <!-- Footer -->
 <div id="footer-placeholder"></div>
 
 <script src="js/loadFooter.js"></script>

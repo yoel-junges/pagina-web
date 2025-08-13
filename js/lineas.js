@@ -146,17 +146,21 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Ocultar imagen actual
         imagenActiva.classList.remove('active');
+        imagenActiva.setAttribute('aria-hidden', 'true');
         
         // Mostrar nueva imagen
         imagenes[indice].classList.add('active');
+        imagenes[indice].removeAttribute('aria-hidden');
         
         // Actualizar indicadores
         const indicadores = carrusel.parentElement.querySelectorAll('.indicador');
         indicadores.forEach((indicador, i) => {
             if (i === indice) {
                 indicador.classList.add('active');
+                indicador.setAttribute('aria-current', 'true');
             } else {
                 indicador.classList.remove('active');
+                indicador.removeAttribute('aria-current');
             }
         });
     }

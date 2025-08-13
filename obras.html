@@ -51,9 +51,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Skip link para accesibilidad -->
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
     <div id="header-placeholder"></div>
 
-    <main class="obras-container">
+    <main id="contenido" class="obras-container">
         <!-- Vista Principal con Tarjetas de Selección -->
         <div id="vista-principal" class="vista-principal">
             <h1>Obras Realizadas</h1>
@@ -62,7 +65,7 @@
             <div class="tarjetas-seleccion">
                 <div class="tarjeta-seleccion" id="tarjeta-residencial" onclick="mostrarVistaResidencial()">
                     <div class="tarjeta-imagen">
-                        <img src="img/casa.jpg" alt="Obras Residenciales">
+                        <img src="img/casa.jpg" alt="Obras Residenciales" loading="lazy" decoding="async">
                         <div class="tarjeta-overlay">
                             <i class="fas fa-home"></i>
                         </div>
@@ -78,7 +81,7 @@
 
                 <div class="tarjeta-seleccion" id="tarjeta-industrial" onclick="mostrarVistaIndustrial()">
                     <div class="tarjeta-imagen">
-                        <img src="img/grandeobra.jpg" alt="Grandes Obras Industriales">
+                        <img src="img/grandeobra.jpg" alt="Grandes Obras Industriales" loading="lazy" decoding="async">
                         <div class="tarjeta-overlay">
                             <i class="fas fa-industry"></i>
                         </div>
