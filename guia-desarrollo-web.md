@@ -561,4 +561,3 @@ Esta implementación proporciona:
 - Sistema de logging para desarrollo
 - Configuración de seguridad básica
 
-¿Te gustaría que profundice en algún aspecto específico de la implementación o que explique más detalladamente alguna funcionalidad en particular? 
