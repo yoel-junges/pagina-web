@@ -1,62 +1,57 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const formulario = document.getElementById('contacto-form');
-    
-    formulario.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        // Obtener los valores del formulario
-        const formData = {
-            nombre: document.getElementById('nombre').value,
-            email: document.getElementById('email').value,
-            telefono: document.getElementById('telefono').value,
-            consulta: document.getElementById('consulta').value,
-            mensaje: document.getElementById('mensaje').value
-        };
-        
-        try {
-            // Mostrar mensaje de carga
-            const botonEnviar = document.querySelector('.btn-enviar');
-            const textoOriginal = botonEnviar.textContent;
-            botonEnviar.textContent = 'Enviando...';
-            botonEnviar.disabled = true;
-            
-            // Enviar los datos al backend
-            const response = await fetch('/api/contacto', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
-            
-            if (response.ok) {
-                // Mostrar mensaje de éxito
-                alert('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.');
-                formulario.reset();
-            } else {
-                throw new Error('Error al enviar el mensaje');
-            }
-        } catch (error) {
-            // Mostrar mensaje de error
-            alert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.');
-            console.error('Error:', error);
-        } finally {
-            // Restaurar el botón
-            const botonEnviar = document.querySelector('.btn-enviar');
-            botonEnviar.textContent = 'Enviar mensaje';
-            botonEnviar.disabled = false;
-        }
+  const formulario = document.getElementById('contacto-form');
+  if (!formulario) return;
+
+  formulario.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Estados de botón
+    const botonEnviar = formulario.querySelector('.btn-enviar');
+    const textoOriginal = botonEnviar ? botonEnviar.textContent : null;
+    if (botonEnviar) {
+      botonEnviar.textContent = 'Enviando...';
+      botonEnviar.disabled = true;
+    }
+
+    try {
+      // Armamos payload en formato x-www-form-urlencoded como requiere Netlify
+      const formData = new FormData(formulario);
+      // Aseguramos el form-name por si el HTML cambia
+      if (!formData.has('form-name')) {
+        formData.append('form-name', formulario.getAttribute('name') || 'contacto');
+      }
+      const body = new URLSearchParams(formData).toString();
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body
+      });
+
+      if (response.ok) {
+        // Redirección a la página de gracias (mejor UX que alert)
+        window.location.href = formulario.getAttribute('action') || '/gracias.html';
+      } else {
+        throw new Error('Respuesta no OK del servidor');
+      }
+    } catch (error) {
+      alert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.');
+      console.error('Error:', error);
+      if (botonEnviar && textoOriginal) {
+        botonEnviar.textContent = textoOriginal;
+        botonEnviar.disabled = false;
+      }
+    }
+  });
+
+  // Efecto de hover/focus (se mantiene tu lógica)
+  const inputs = formulario.querySelectorAll('input, select, textarea');
+  inputs.forEach(input => {
+    input.addEventListener('focus', function() {
+      if (this.parentElement) this.parentElement.style.transform = 'translateY(-2px)';
     });
-    
-    // Efecto de hover en los campos del formulario
-    const inputs = formulario.querySelectorAll('input, select, textarea');
-    inputs.forEach(input => {
-        input.addEventListener('focus', function() {
-            this.parentElement.style.transform = 'translateY(-2px)';
-        });
-        
-        input.addEventListener('blur', function() {
-            this.parentElement.style.transform = 'translateY(0)';
-        });
+    input.addEventListener('blur', function() {
+      if (this.parentElement) this.parentElement.style.transform = 'translateY(0)';
     });
-}); 
+  });
+});
