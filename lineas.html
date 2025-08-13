@@ -63,13 +63,13 @@
         
         <!-- Navegación de líneas -->
         <nav class="lineas-nav" role="tablist" aria-label="Líneas de aberturas">
-            <button class="linea-btn active" id="tab-modena" role="tab" aria-selected="true" aria-controls="modena">Línea Módena</button>
-            <button class="linea-btn" id="tab-a30" role="tab" aria-selected="false" aria-controls="a30" tabindex="-1">Línea A-30</button>
-            <button class="linea-btn" id="tab-a40" role="tab" aria-selected="false" aria-controls="a40" tabindex="-1">Línea A-40</button>
-            <button class="linea-btn" id="tab-mediterranea" role="tab" aria-selected="false" aria-controls="mediterranea" tabindex="-1">Línea Mediterránea</button>
-            <button class="linea-btn" id="tab-mediterranea-rpt" role="tab" aria-selected="false" aria-controls="mediterranea-rpt" tabindex="-1">Línea Mediterránea RPT</button>
-            <button class="linea-btn" id="tab-niza" role="tab" aria-selected="false" aria-controls="niza" tabindex="-1">Línea Niza</button>
-            <button class="linea-btn" id="tab-frentes" role="tab" aria-selected="false" aria-controls="frentes" tabindex="-1">Fachadas</button>
+            <button class="linea-btn active" id="tab-modena" data-linea="modena" role="tab" aria-selected="true" aria-controls="modena">Línea Módena</button>
+            <button class="linea-btn" id="tab-a30" data-linea="a30" role="tab" aria-selected="false" aria-controls="a30" tabindex="-1">Línea A-30</button>
+            <button class="linea-btn" id="tab-a40" data-linea="a40" role="tab" aria-selected="false" aria-controls="a40" tabindex="-1">Línea A-40</button>
+            <button class="linea-btn" id="tab-mediterranea" data-linea="mediterranea" role="tab" aria-selected="false" aria-controls="mediterranea" tabindex="-1">Línea Mediterránea</button>
+            <button class="linea-btn" id="tab-mediterranea-rpt" data-linea="mediterranea-rpt" role="tab" aria-selected="false" aria-controls="mediterranea-rpt" tabindex="-1">Línea Mediterránea RPT</button>
+            <button class="linea-btn" id="tab-niza" data-linea="niza" role="tab" aria-selected="false" aria-controls="niza" tabindex="-1">Línea Niza</button>
+            <button class="linea-btn" id="tab-frentes" data-linea="frentes" role="tab" aria-selected="false" aria-controls="frentes" tabindex="-1">Fachadas</button>
         </nav>
 
         <!-- Contenido de las líneas -->
@@ -441,7 +441,6 @@
     
     <script src="js/loadFooter.js"></script>
 
-    <script src="js/lineas.js"></script>
-    <script src="js/tabs-a11y.js"></script>
+    <script src="/js/lineas-tabs.js" defer></script>
 </body>
 </html>

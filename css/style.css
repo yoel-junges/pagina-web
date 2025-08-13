@@ -1085,6 +1085,9 @@ section {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
+/* CSS mínimo para ocultar */
+[hidden]{ display:none !important; }
+
 /* Nuevos estilos para mapa responsive */
 .mapa-wrap {
   position: relative;
