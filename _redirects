@@ -1,12 +1,11 @@
-# --- CANÓNICO: siempre forzar https + www ---
-http://metalurgicabreques.com.ar/*     https://www.metalurgicabreques.com.ar/:splat   301!
-https://metalurgicabreques.com.ar/*    https://www.metalurgicabreques.com.ar/:splat   301!
-http://www.metalurgicabreques.com.ar/* https://www.metalurgicabreques.com.ar/:splat   301!
+# Fuerza HTTPS + canónico sin www
+http://metalurgicabreques.com.ar/*      https://metalurgicabreques.com.ar/:splat 301!
+https://www.metalurgicabreques.com.ar/* https://metalurgicabreques.com.ar/:splat 301!
+http://www.metalurgicabreques.com.ar/*  https://metalurgicabreques.com.ar/:splat 301!
 
-# --- LIMPIEZA: quitar /index.html de la URL pública ---
-/index.html   /   301
+# Redirige del subdominio de Netlify al canónico
+http://probando-breques.netlify.app/*   https://metalurgicabreques.com.ar/:splat 301!
+https://probando-breques.netlify.app/*  https://metalurgicabreques.com.ar/:splat 301!
 
-# --- (PREPARADO) Redirigir el subdominio de Netlify al dominio final ---
-# Descomenta estas dos líneas SOLO cuando el dominio ya esté apuntando a Netlify y con SSL emitido.
-# http://probando-breques.netlify.app/*   https://www.metalurgicabreques.com.ar/:splat   301!
-# https://probando-breques.netlify.app/*  https://www.metalurgicabreques.com.ar/:splat   301! 
+# Limpieza
+/index.html  /  301 
