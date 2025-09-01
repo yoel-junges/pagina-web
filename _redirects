@@ -13,5 +13,5 @@ https://probando-breques.netlify.app/*  https://metalurgicabreques.com.ar/:splat
 /obras.html          /obras      301!
 /contacto.html       /contacto   301!
 
-# Guardarraíl: si pegan el dominio dentro de la ruta, mandá a la ruta correcta
-/https://metalurgicabreques.com.ar/*   /:splat 301!
+# Guardarraíl: si pegan un http(s) dentro del path, manda a la ruta correcta
+/http*               /:splat     301!
