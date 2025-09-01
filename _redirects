@@ -1,11 +1,17 @@
-# Fuerza HTTPS + canónico sin www
+# Fuerza HTTPS y dominio canónico (apex, sin www)
 http://metalurgicabreques.com.ar/*      https://metalurgicabreques.com.ar/:splat 301!
 https://www.metalurgicabreques.com.ar/* https://metalurgicabreques.com.ar/:splat 301!
 http://www.metalurgicabreques.com.ar/*  https://metalurgicabreques.com.ar/:splat 301!
 
-# Redirige del subdominio de Netlify al canónico
+# Redirige el subdominio de Netlify al canónico
 http://probando-breques.netlify.app/*   https://metalurgicabreques.com.ar/:splat 301!
 https://probando-breques.netlify.app/*  https://metalurgicabreques.com.ar/:splat 301!
 
-# Limpieza
-/index.html  /  301 
+# Limpieza de .html -> URLs lindas
+/index.html          /           301!
+/lineas.html         /lineas     301!
+/obras.html          /obras      301!
+/contacto.html       /contacto   301!
+
+# Guardarraíl por si alguien pega el dominio dos veces en la ruta
+/https://metalurgicabreques.com.ar/*   /:splat 301!
