@@ -7,11 +7,18 @@ http://www.metalurgicabreques.com.ar/*  https://metalurgicabreques.com.ar/:splat
 http://probando-breques.netlify.app/*   https://metalurgicabreques.com.ar/:splat 301!
 https://probando-breques.netlify.app/*  https://metalurgicabreques.com.ar/:splat 301!
 
+# URLs limpias: servir .html cuando piden /ruta (200 = rewrite, no redirige)
+/lineas              /lineas.html    200
+/obras               /obras.html     200
+/contacto            /contacto.html  200
+/empresa             /empresa.html  200
+
 # Limpieza de .html → URLs lindas
 /index.html          /           301!
 /lineas.html         /lineas     301!
 /obras.html          /obras      301!
 /contacto.html       /contacto   301!
+/empresa.html        /empresa    301!
 
 # Si meten el dominio dentro del path, corregir a la ruta correcta
 /https://metalurgicabreques.com.ar/*   /:splat 301!

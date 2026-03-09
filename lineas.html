@@ -62,19 +62,27 @@
     <main id="contenido" class="lineas-container">
         <h1>Nuestras Líneas de Aberturas</h1>
         
-        <!-- Navegación de líneas -->
-        <nav class="lineas-nav" role="tablist" aria-label="Líneas de aberturas">
-            <button class="linea-btn active" id="tab-modena" data-linea="modena" role="tab" aria-selected="true" aria-controls="modena">Línea Módena</button>
-            <button class="linea-btn" id="tab-a30" data-linea="a30" role="tab" aria-selected="false" aria-controls="a30" tabindex="-1">Línea A-30</button>
-            <button class="linea-btn" id="tab-a40" data-linea="a40" role="tab" aria-selected="false" aria-controls="a40" tabindex="-1">Línea A-40</button>
-            <button class="linea-btn" id="tab-mediterranea" data-linea="mediterranea" role="tab" aria-selected="false" aria-controls="mediterranea" tabindex="-1">Línea Mediterránea</button>
-            <button class="linea-btn" id="tab-mediterranea-rpt" data-linea="mediterranea-rpt" role="tab" aria-selected="false" aria-controls="mediterranea-rpt" tabindex="-1">Línea Mediterránea RPT</button>
-            <button class="linea-btn" id="tab-niza" data-linea="niza" role="tab" aria-selected="false" aria-controls="niza" tabindex="-1">Línea Niza</button>
-            <button class="linea-btn" id="tab-frentes" data-linea="frentes" role="tab" aria-selected="false" aria-controls="frentes" tabindex="-1">Fachadas</button>
+        <!-- Navegación principal: Aluminio y PVC -->
+        <nav class="material-nav" role="tablist" aria-label="Tipo de material">
+            <button class="material-btn active" id="tab-aluminio" data-material="aluminio" role="tab" aria-selected="true" aria-controls="aluminio">Aluminio</button>
+            <button class="material-btn" id="tab-pvc" data-material="pvc" role="tab" aria-selected="false" aria-controls="pvc" tabindex="-1">PVC</button>
         </nav>
 
-        <!-- Contenido de las líneas -->
-        <div class="lineas-contenido">
+        <!-- Sección Aluminio -->
+        <div class="material-section active" id="aluminio" role="tabpanel" aria-labelledby="tab-aluminio">
+            <!-- Navegación de líneas de Aluminio -->
+            <nav class="lineas-nav" role="tablist" aria-label="Líneas de aberturas de aluminio">
+                <button class="linea-btn active" id="tab-modena" data-linea="modena" role="tab" aria-selected="true" aria-controls="modena">Línea Módena</button>
+                <button class="linea-btn" id="tab-a30" data-linea="a30" role="tab" aria-selected="false" aria-controls="a30" tabindex="-1">Línea A-30</button>
+                <button class="linea-btn" id="tab-a40" data-linea="a40" role="tab" aria-selected="false" aria-controls="a40" tabindex="-1">Línea A-40</button>
+                <button class="linea-btn" id="tab-mediterranea" data-linea="mediterranea" role="tab" aria-selected="false" aria-controls="mediterranea" tabindex="-1">Línea Mediterránea</button>
+                <button class="linea-btn" id="tab-mediterranea-rpt" data-linea="mediterranea-rpt" role="tab" aria-selected="false" aria-controls="mediterranea-rpt" tabindex="-1">Línea Mediterránea RPT</button>
+                <button class="linea-btn" id="tab-niza" data-linea="niza" role="tab" aria-selected="false" aria-controls="niza" tabindex="-1">Línea Niza</button>
+                <button class="linea-btn" id="tab-frentes" data-linea="frentes" role="tab" aria-selected="false" aria-controls="frentes" tabindex="-1">Fachadas</button>
+            </nav>
+
+            <!-- Contenido de las líneas de Aluminio -->
+            <div class="lineas-contenido">
             <!-- Línea Módena -->
             <section class="linea-info active" id="modena" role="tabpanel" aria-labelledby="tab-modena">
                 <div class="linea-header">
@@ -434,15 +442,601 @@
                     </div>
                 </div>
             </section>
+            </div>
+        </div>
+
+        <!-- Sección PVC -->
+        <div class="material-section" id="pvc" role="tabpanel" aria-labelledby="tab-pvc" hidden>
+            <div class="lineas-contenido">
+                <div class="linea-pvc-container">
+                <div class="linea-header">
+                    <h2>Línea PVC</h2>
+                    <p class="linea-descripcion">Comercializamos e instalamos aberturas de PVC con el respaldo de Ventex, tecnología industrial de la Red Ventex. Máxima eficiencia energética, aislamiento térmico y acústico superior. Ventex nos provee los productos terminados; nosotros nos encargamos de la venta, logística e instalación profesional.</p>
+                </div>
+
+                <!-- Categoría A: Sistemas de Apertura -->
+                <div class="categoria-pvc">
+                    <h3 class="categoria-titulo">
+                        <i class="fas fa-window-maximize"></i>
+                        Sistemas de Apertura
+                    </h3>
+                    <div class="productos-grid-pvc">
+                        
+                        <!-- Abertura Corrediza -->
+                        <div class="producto-card-pvc" id="corrediza" data-titulo="Abertura Corrediza" data-imagen="img/corrediza-pvc.png" data-descripcion="Ideal para grandes luces y espacios amplios. Máxima hermeticidad con sistema de deslizamiento suave." data-medidas="Mínimas: 1200 x 600 mm | Máximas: 5750 x 3000 mm" data-caracteristicas="En 3 vías se pueden combinar hasta 6 hojas móviles y/o fijas. Permiten acristalar paños simples y dobles de hasta 3 metros de altura, con vidrios de hasta 34 mm de espesor||Permiten el uso de mosquiteros y son perfectas si la abertura tiene una reja externa||Ideales para optimizar ambientes, al no ocupar espacio adicional al abrirse||Grandes dimensiones: Permiten recibir mucha luz natural y disfrutar de grandes vistas">
+                            <div class="producto-imagen-pvc">
+                                <img src="img/corrediza-pvc.png" alt="Abertura Corrediza PVC" loading="lazy" decoding="async">
+                                <div class="producto-badges">
+                                    <span class="badge-pvc badge-energia"><i class="fas fa-leaf"></i> Ahorro Energético</span>
+                                    <span class="badge-pvc badge-acustica"><i class="fas fa-volume-down"></i> Aislación Acústica</span>
+                                </div>
+                            </div>
+                            <div class="producto-contenido-pvc-simple">
+                                <h4>Abertura Corrediza</h4>
+                                <button type="button" class="btn-ver-detalles-pvc">Ver detalles</button>
+                            </div>
+                        </div>
+
+                        <!-- Abertura Oscilobatiente -->
+                        <div class="producto-card-pvc" id="oscilobatiente" data-titulo="Abertura Oscilobatiente" data-imagen="img/oscilobatiente-pvc.png" data-descripcion="Máxima versatilidad: se abre como batiente o como proyectante. Perfecta para ventilación controlada." data-medidas="Mínimas: 550 x 550 mm | Máximas: 1200 x 1800 mm" data-caracteristicas="Doble opción de apertura por sistema de herrajes combinados: tanto lateral (ventana de abrir) como inclinada superior (banderola)||Cuenta con seguro contra falsa maniobra y con seguro contra corrientes de aire, que evita un cierre inesperado de la ventana||Al ser 100% Herméticas, son ideales para reducir el ruido exterior en zonas con alto tránsito y para obtener un mayor ahorro en climatización||Máxima versatilidad: ventilación adaptable a las condiciones climáticas (Reducida: ideal para no enfriar la habitación; Completa: circulación de aire fresco)">
+                            <div class="producto-imagen-pvc">
+                                <img src="img/oscilobatiente-pvc.png" alt="Abertura Oscilobatiente PVC" loading="lazy" decoding="async">
+                                <div class="producto-badges">
+                                    <span class="badge-pvc badge-energia"><i class="fas fa-leaf"></i> Ahorro Energético</span>
+                                    <span class="badge-pvc badge-acustica"><i class="fas fa-volume-down"></i> Aislación Acústica</span>
+                                </div>
+                            </div>
+                            <div class="producto-contenido-pvc-simple">
+                                <h4>Abertura Oscilobatiente</h4>
+                                <button type="button" class="btn-ver-detalles-pvc">Ver detalles</button>
+                            </div>
+                        </div>
+
+                        <!-- Abertura Banderola -->
+                        <div class="producto-card-pvc" id="banderola" data-titulo="Abertura Banderola" data-imagen="img/banderola-pvc.png" data-descripcion="Apertura superior ideal para espacios donde se requiere ventilación sin comprometer la seguridad." data-medidas="Mínimas: 550 x 550 mm | Máximas: 2000 x 1200 mm" data-caracteristicas="De apertura superior regulable, se proyecta verticalmente hacia adentro, permitiendo limpieza desde el interior||100% Hermético: Máximo aislamiento térmico y acústico. Perfecta estanqueidad al viento y a la lluvia||Se utiliza con frecuencia en oficinas, baños y cocheras">
+                            <div class="producto-imagen-pvc">
+                                <img src="img/banderola-pvc.png" alt="Abertura Banderola PVC" loading="lazy" decoding="async">
+                                <div class="producto-badges">
+                                    <span class="badge-pvc badge-energia"><i class="fas fa-leaf"></i> Ahorro Energético</span>
+                                    <span class="badge-pvc badge-acustica"><i class="fas fa-volume-down"></i> Aislación Acústica</span>
+                                </div>
+                            </div>
+                            <div class="producto-contenido-pvc-simple">
+                                <h4>Abertura Banderola</h4>
+                                <button type="button" class="btn-ver-detalles-pvc">Ver detalles</button>
+                            </div>
+                        </div>
+
+                        <!-- Abertura Proyectante -->
+                        <div class="producto-card-pvc" id="proyectante" data-titulo="Abertura Proyectante" data-imagen="img/proyectante-pvvc.png" data-descripcion="Apertura hacia afuera con sistema de brazos. Perfecta para espacios donde se necesita ventilación sin ocupar espacio interior." data-medidas="Mínimas: 550 x 550 mm | Máximas: 1200 x 1800 mm" data-caracteristicas="Una pareja de compases en los laterales desplazan la hoja hacia fuera y hacia abajo simultáneamente, lo que permite una ventilación desde la base||No ocupan espacio interior. Al abrir hacia afuera, mantienen el interior utilizable para muebles o cortinas">
+                            <div class="producto-imagen-pvc">
+                                <img src="img/proyectante-pvvc.png" alt="Abertura Proyectante PVC" loading="lazy" decoding="async">
+                                <div class="producto-badges">
+                                    <span class="badge-pvc badge-energia"><i class="fas fa-leaf"></i> Ahorro Energético</span>
+                                    <span class="badge-pvc badge-acustica"><i class="fas fa-volume-down"></i> Aislación Acústica</span>
+                                </div>
+                            </div>
+                            <div class="producto-contenido-pvc-simple">
+                                <h4>Abertura Proyectante</h4>
+                                <button type="button" class="btn-ver-detalles-pvc">Ver detalles</button>
+                            </div>
+                        </div>
+
+                        <!-- Abertura Plegadiza -->
+                        <div class="producto-card-pvc" id="plegadiza" data-titulo="Abertura Plegadiza" data-imagen="img/plegadiza-pvc.png" data-descripcion="Sistema de hojas plegables que se recogen lateralmente. Ideal para amplios vanos y máxima entrada de luz." data-medidas="Mínimas: 1500 x 1000 mm | Máximas: 5750 x 2600 mm" data-caracteristicas="Permite liberar 100% del paso, lo que las hace ideales para galerías y garages, ya que el umbral es transitable con vehículo||Integran ambientes, ya que todos los elementos se pueden plegar y deslizar sobre el marco, lo que es ideal para optimizar balcones y terrazas">
+                            <div class="producto-imagen-pvc">
+                                <img src="img/plegadiza-pvc.png" alt="Abertura Plegadiza PVC" loading="lazy" decoding="async">
+                                <div class="producto-badges">
+                                    <span class="badge-pvc badge-energia"><i class="fas fa-leaf"></i> Ahorro Energético</span>
+                                    <span class="badge-pvc badge-acustica"><i class="fas fa-volume-down"></i> Aislación Acústica</span>
+                                </div>
+                            </div>
+                            <div class="producto-contenido-pvc-simple">
+                                <h4>Abertura Plegadiza</h4>
+                                <button type="button" class="btn-ver-detalles-pvc">Ver detalles</button>
+                            </div>
+                        </div>
+
+                        <!-- Abertura Practicable -->
+                        <div class="producto-card-pvc" id="practicable" data-titulo="Abertura Practicable" data-imagen="img/practicable-pvc.png" data-descripcion="Apertura hacia adentro o afuera con bisagras. Máxima hermeticidad y estanqueidad al viento y agua." data-medidas="Mínimas: 550 x 550 mm | Máximas: 1200 x 1800 mm" data-caracteristicas="100% Herméticas: Los herrajes multipunto de cierre las convierten en aberturas con máxima aislación térmica y acústica. Son ideales para zonas con alto tránsito y ruido del exterior y para obtener un mayor ahorro en climatización||Permiten su total apertura, pudiendo girar 180° dejando así el 100% del paso libre||Permiten el uso de mosquiteros y son perfectas si la abertura tiene una reja externa">
+                            <div class="producto-imagen-pvc">
+                                <img src="img/practicable-pvc.png" alt="Abertura Practicable PVC" loading="lazy" decoding="async">
+                                <div class="producto-badges">
+                                    <span class="badge-pvc badge-energia"><i class="fas fa-leaf"></i> Ahorro Energético</span>
+                                    <span class="badge-pvc badge-acustica"><i class="fas fa-volume-down"></i> Aislación Acústica</span>
+                                </div>
+                            </div>
+                            <div class="producto-contenido-pvc-simple">
+                                <h4>Abertura Practicable</h4>
+                                <button type="button" class="btn-ver-detalles-pvc">Ver detalles</button>
+                            </div>
+                        </div>
+
+                        <!-- Abertura Paralela -->
+                        <div class="producto-card-pvc" id="paralela" data-titulo="Abertura Paralela" data-imagen="img/paralela.png" data-descripcion="Hojas que se deslizan de forma paralela. Ideal para grandes luces con máximo aprovechamiento del espacio." data-medidas="Mínimas: 1500 x 1000 mm | Máximas: 3000 x 2350 mm" data-caracteristicas="Combina la funcionalidad de una corrediza con la estanqueidad y hermeticidad de una abertura doble contacto||En el primer punto de apertura la hoja de la ventana se separa paralela al marco, creando 6 mm de separación que permite una ventilación natural y segura ante cualquier condición climatológica; en el segundo se desplaza paralela al marco como una corrediza convencional||En la posición de apertura reducida ofrece la misma seguridad frente a robos que con la ventana cerrada">
+                            <div class="producto-imagen-pvc">
+                                <img src="img/paralela.png" alt="Abertura Paralela PVC" loading="lazy" decoding="async">
+                                <div class="producto-badges">
+                                    <span class="badge-pvc badge-energia"><i class="fas fa-leaf"></i> Ahorro Energético</span>
+                                    <span class="badge-pvc badge-acustica"><i class="fas fa-volume-down"></i> Aislación Acústica</span>
+                                </div>
+                            </div>
+                            <div class="producto-contenido-pvc-simple">
+                                <h4>Abertura Paralela</h4>
+                                <button type="button" class="btn-ver-detalles-pvc">Ver detalles</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Categoría B: Sistemas de Puertas -->
+                <div class="categoria-pvc">
+                    <h3 class="categoria-titulo">
+                        <i class="fas fa-door-open"></i>
+                        Sistemas de Puertas
+                    </h3>
+                    
+                    <h4 class="puertas-subtitulo">
+                        <i class="fas fa-glass-martini-alt"></i>
+                        Puertas Vidriadas y Machimbre
+                    </h4>
+                    <div class="productos-grid-pvc">
+                        
+                        <!-- Puerta Vidriada -->
+                        <div class="producto-card-pvc" id="puerta-vidriada" data-titulo="Puerta Vidriada" data-imagen="img/vidriada-pvc.png" data-descripcion="De apertura interior y exterior, con bisagras en el marco del lateral elegido. Máxima hermeticidad y estanqueidad." data-medidas="Una hoja: 1000 x 2300 mm | Dos hojas: 1800 x 2300 mm" data-caracteristicas="De apertura interior y exterior, con bisagras en el marco del lateral elegido||Poseen el marco y las hojas con refuerzo de hierro galvanizado||Con burlete de estanqueidad de EPDM exterior e interior, dejan la hoja y marco sellados perimetralmente">
+                            <div class="producto-imagen-pvc">
+                                <img src="img/vidriada-pvc.png" alt="Puerta Vidriada PVC" loading="lazy" decoding="async">
+                                <div class="producto-badges">
+                                    <span class="badge-pvc badge-energia"><i class="fas fa-leaf"></i> Ahorro Energético</span>
+                                    <span class="badge-pvc badge-acustica"><i class="fas fa-volume-down"></i> Aislación Acústica</span>
+                                </div>
+                            </div>
+                            <div class="producto-contenido-pvc-simple">
+                                <h4>Puerta Vidriada</h4>
+                                <button type="button" class="btn-ver-detalles-pvc">Ver detalles</button>
+                            </div>
+                        </div>
+
+                        <!-- Puerta Machimbre -->
+                        <div class="producto-card-pvc" id="puerta-machimbre" data-titulo="Puerta Machimbre" data-imagen="img/machimbre-pvc.png" data-descripcion="Estética tradicional con tecnología moderna. De apertura interior y exterior, ideal para interiores y exteriores." data-medidas="Una hoja: 1000 x 2300 mm | Dos hojas: 1800 x 2300 mm" data-caracteristicas="De apertura interior y exterior, con bisagras en el marco del lateral elegido||Poseen el marco y las hojas con refuerzo de hierro galvanizado||Con burlete de estanqueidad de EPDM exterior e interior, dejan la hoja y marco sellados perimetralmente">
+                            <div class="producto-imagen-pvc">
+                                <img src="img/machimbre-pvc.png" alt="Puerta Machimbre PVC" loading="lazy" decoding="async">
+                                <div class="producto-badges">
+                                    <span class="badge-pvc badge-energia"><i class="fas fa-leaf"></i> Ahorro Energético</span>
+                                    <span class="badge-pvc badge-acustica"><i class="fas fa-volume-down"></i> Aislación Acústica</span>
+                                </div>
+                            </div>
+                            <div class="producto-contenido-pvc-simple">
+                                <h4>Puerta Machimbre</h4>
+                                <button type="button" class="btn-ver-detalles-pvc">Ver detalles</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="puertas-subtitulo" id="puertas-frente">
+                        <i class="fas fa-home"></i>
+                        Puertas Frente
+                    </h4>
+                    <div class="productos-grid-pvc">
+                        <!-- Puerta Frente - Línea Ranurada -->
+                        <div class="producto-card-pvc puerta-frente" id="frente-ranurada" data-titulo="Línea Ranurada" data-imagen="img/perta_ranurada-pvc.png" data-descripcion="Diseño con líneas ranuradas que aportan textura y elegancia. Paneles con foliados de origen Alemán." data-medidas="Una hoja: 1000 x 2300 mm | Dos hojas: 1800 x 2300 mm" data-caracteristicas="Paneles con foliados de origen Alemán, para la elaboración de aberturas y cerramientos termoconformados||Contamos con las líneas Pampa, Lanín y Ranurada, con detalles opcionales en sus diseños (Molduras en bajo relieve y embellecedores de PVC Símil Acero)||Diseñados para construcciones modernas o clásicas, por sus líneas simples y puras||Los foliados disponibles son: Golden Oak, Blanco y Nogal">
+                            <div class="producto-imagen-pvc">
+                                <img src="img/perta_ranurada-pvc.png" alt="Puerta Frente Línea Ranurada PVC" loading="lazy" decoding="async">
+                                <div class="producto-badges">
+                                    <span class="badge-pvc badge-energia"><i class="fas fa-leaf"></i> Ahorro Energético</span>
+                                    <span class="badge-pvc badge-acustica"><i class="fas fa-volume-down"></i> Aislación Acústica</span>
+                                    <span class="badge-pvc badge-foliado"><i class="fas fa-palette"></i> Foliados Alemanes</span>
+                                </div>
+                            </div>
+                            <div class="producto-contenido-pvc-simple">
+                                <h4>Línea Ranurada</h4>
+                                <button type="button" class="btn-ver-detalles-pvc">Ver detalles</button>
+                            </div>
+                        </div>
+
+                        <!-- Puerta Frente - Línea Pampa -->
+                        <div class="producto-card-pvc puerta-frente" id="frente-pampa" data-titulo="Línea Pampa" data-imagen="img/puerta_pampa-pvc.png" data-descripcion="Líneas simples y puras que se adaptan a cualquier estilo. Mayor variedad de foliados." data-medidas="Una hoja: 1000 x 2300 mm | Dos hojas: 1800 x 2300 mm" data-caracteristicas="Paneles con foliados de origen Alemán, para la elaboración de aberturas y cerramientos termoconformados||Contamos con las líneas Pampa, Lanín y Ranurada, con detalles opcionales en sus diseños (Molduras en bajo relieve y embellecedores de PVC Símil Acero)||Diseñados para construcciones modernas o clásicas, por sus líneas simples y puras||Los foliados disponibles son: Golden Oak, Blanco y Nogal">
+                            <div class="producto-imagen-pvc">
+                                <img src="img/puerta_pampa-pvc.png" alt="Puerta Frente Línea Pampa PVC" loading="lazy" decoding="async">
+                                <div class="producto-badges">
+                                    <span class="badge-pvc badge-energia"><i class="fas fa-leaf"></i> Ahorro Energético</span>
+                                    <span class="badge-pvc badge-acustica"><i class="fas fa-volume-down"></i> Aislación Acústica</span>
+                                    <span class="badge-pvc badge-foliado"><i class="fas fa-palette"></i> Foliados Alemanes</span>
+                                </div>
+                            </div>
+                            <div class="producto-contenido-pvc-simple">
+                                <h4>Línea Pampa</h4>
+                                <button type="button" class="btn-ver-detalles-pvc">Ver detalles</button>
+                            </div>
+                        </div>
+
+                        <!-- Puerta Frente - Línea Lanín -->
+                        <div class="producto-card-pvc puerta-frente" id="frente-lanin" data-titulo="Línea Lanín" data-imagen="img/puerta_lanin-pvc.png" data-descripcion="Diseño clásico y elegante. Perfecta para construcciones que buscan un estilo atemporal y refinado." data-medidas="Una hoja: 1000 x 2300 mm | Dos hojas: 1800 x 2300 mm" data-caracteristicas="Paneles con foliados de origen Alemán, para la elaboración de aberturas y cerramientos termoconformados||Contamos con las líneas Pampa, Lanín y Ranurada, con detalles opcionales en sus diseños (Molduras en bajo relieve y embellecedores de PVC Símil Acero)||Diseñados para construcciones modernas o clásicas, por sus líneas simples y puras||Los foliados disponibles son: Golden Oak, Blanco y Nogal">
+                            <div class="producto-imagen-pvc">
+                                <img src="img/puerta_lanin-pvc.png" alt="Puerta Frente Línea Lanín PVC" loading="lazy" decoding="async">
+                                <div class="producto-badges">
+                                    <span class="badge-pvc badge-energia"><i class="fas fa-leaf"></i> Ahorro Energético</span>
+                                    <span class="badge-pvc badge-acustica"><i class="fas fa-volume-down"></i> Aislación Acústica</span>
+                                    <span class="badge-pvc badge-foliado"><i class="fas fa-palette"></i> Foliados Alemanes</span>
+                                </div>
+                            </div>
+                            <div class="producto-contenido-pvc-simple">
+                                <h4>Línea Lanín</h4>
+                                <button type="button" class="btn-ver-detalles-pvc">Ver detalles</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Sección Acabados y Texturas -->
+                <div class="acabados-texturas-section">
+                    <div class="acabados-header">
+                        <h3 class="acabados-titulo">La calidez de la madera, la tecnología del PVC</h3>
+                        <p class="acabados-subtitulo">Símil madera y color/símil metal para todas nuestras aberturas y puertas de PVC. Resistentes a la intemperie, sin mantenimiento.</p>
+                    </div>
+                    
+                    <!-- Carrusel de colores -->
+                    <div class="acabados-carrusel-wrapper">
+                        <button class="acabados-carrusel-btn prev" type="button" aria-label="Colores anteriores" onclick="moverCarruselAcabados(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        
+                        <div class="acabados-carrusel-container">
+                            <div class="acabados-carrusel-track" id="acabados-track">
+                                
+                                <!-- Símil madera -->
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/grey_oak.png" alt="Grey Oak" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #8b7355 0%, #6f5b44 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Grey Oak</span>
+                                    <span class="acabado-tag">Símil madera</span>
+                                </div>
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/natural_oak.png" alt="Natural Oak" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #c4a574 0%, #a88654 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Natural Oak</span>
+                                    <span class="acabado-tag">Símil madera</span>
+                                </div>
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/golden_oak.png" alt="Golden Oak" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #d4a574 0%, #c49660 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Golden Oak</span>
+                                    <span class="acabado-tag">Símil madera</span>
+                                </div>
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/lenga.png" alt="Lenga" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #a08060 0%, #806040 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Lenga</span>
+                                    <span class="acabado-tag">Símil madera</span>
+                                </div>
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/cherry.png" alt="Cherry" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #6b4423 0%, #5a391e 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Cherry</span>
+                                    <span class="acabado-tag">Símil madera</span>
+                                </div>
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/sipo.png" alt="Sipo" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #8b6914 0%, #6b5114 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Sipo</span>
+                                    <span class="acabado-tag">Símil madera</span>
+                                </div>
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/turner_oak.png" alt="Turner Oak" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #b8860b 0%, #9a7209 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Turner Oak</span>
+                                    <span class="acabado-tag">Símil madera</span>
+                                </div>
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/nogal.png" alt="Nogal" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #5c4033 0%, #4a3328 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Nogal</span>
+                                    <span class="acabado-tag">Símil madera</span>
+                                </div>
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/sapelli.png" alt="Sapelli" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #8b4513 0%, #6b3510 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Sapelli</span>
+                                    <span class="acabado-tag">Símil madera</span>
+                                </div>
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/wengue.png" alt="Wengué" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #2d1810 0%, #1f1008 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Wengué</span>
+                                    <span class="acabado-tag">Símil madera</span>
+                                </div>
+                                
+                                <!-- Color y símil metal -->
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/blanco.png" alt="Blanco" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Blanco</span>
+                                    <span class="acabado-tag">Símil metal</span>
+                                </div>
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/marfil.png" alt="Marfil" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #fffff0 0%, #f5f5dc 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Marfil</span>
+                                    <span class="acabado-tag">Símil metal</span>
+                                </div>
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/gris_metalizado.png" alt="Gris Metalizado" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #808080 0%, #606060 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Gris Metalizado</span>
+                                    <span class="acabado-tag">Símil metal</span>
+                                </div>
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/peltre.png" alt="Peltre" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #708090 0%, #4a5568 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Peltre</span>
+                                    <span class="acabado-tag">Símil metal</span>
+                                </div>
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/verde.png" alt="Verde" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #2d5016 0%, #1f3810 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Verde</span>
+                                    <span class="acabado-tag">Símil metal</span>
+                                </div>
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/gris_grafito.png" alt="Gris Grafito" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #4a4a4a 0%, #2d2d2d 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Gris Grafito</span>
+                                    <span class="acabado-tag">Símil metal</span>
+                                </div>
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/brown_mat.png" alt="Brown Mat" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #5c4033 0%, #4a3328 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Brown Mat</span>
+                                    <span class="acabado-tag">Símil metal</span>
+                                </div>
+                                <div class="acabado-swatch">
+                                    <div class="acabado-circulo">
+                                        <img src="img/jet_black.png" alt="Jet Black" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)';">
+                                    </div>
+                                    <span class="acabado-nombre">Jet Black</span>
+                                    <span class="acabado-tag">Símil metal</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <button class="acabados-carrusel-btn next" type="button" aria-label="Siguientes colores" onclick="moverCarruselAcabados(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="acabados-info">
+                        <div class="info-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Resistencia Garantizada</h4>
+                            <p>Los foliados son resistentes a la intemperie, no se deforman ni decoloran</p>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-ban"></i>
+                            <h4>Sin Mantenimiento</h4>
+                            <p>La tecnología alemana garantiza durabilidad sin necesidad de mantenimiento</p>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-palette"></i>
+                            <h4>Textura Real</h4>
+                            <p>Aspecto visual y táctil que simula perfectamente la madera o el metal</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Contenido de productos de PVC (versión antigua - mantener por compatibilidad) -->
+            <div class="lineas-contenido" style="display: none;">
+                <!-- Puertas Vidriadas PVC -->
+                <section class="linea-info active" id="pvc-puertas-vidriadas" role="tabpanel" aria-labelledby="tab-pvc-puertas-vidriadas">
+                    <div class="linea-header">
+                        <h2>Puertas Vidriadas de PVC</h2>
+                        <p class="linea-descripcion">Puertas de PVC con vidrio, ideales para interiores y exteriores. De apertura interior y exterior, con bisagras en el marco del lateral elegido. Poseen el marco y las hojas con refuerzo de hierro galvanizado y burlete de estanqueidad de EPDM exterior e interior, garantizando máxima hermeticidad y aislamiento térmico y acústico.</p>
+                    </div>
+                    
+                    <div class="linea-caracteristicas">
+                        <div class="caracteristica">
+                            <h3>Características Técnicas</h3>
+                            <ul>
+                                <li>Apertura interior y exterior, con bisagras en el marco del lateral elegido.</li>
+                                <li>Marco y hojas con refuerzo de hierro galvanizado.</li>
+                                <li>Burlete de estanqueidad de EPDM exterior e interior.</li>
+                                <li>Hoja y marco sellados perimetralmente.</li>
+                                <li>Vidrios admitidos: simples o DVH (doble vidriado hermético).</li>
+                                <li><strong>Medidas máximas:</strong>
+                                    <ul>
+                                        <li>Una hoja: 1000 x 2300 mm</li>
+                                        <li>Dos hojas: 1800 x 2300 mm</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="caracteristica">
+                            <h3>Ventajas</h3>
+                            <ul>
+                                <li>Excelente hermeticidad y estanqueidad total.</li>
+                                <li>Máximo aislamiento térmico y acústico.</li>
+                                <li>Resistencia y durabilidad superior.</li>
+                                <li>Bajo o nulo mantenimiento requerido.</li>
+                                <li>Gran variedad de foliados disponibles (Turner Oak, colores sólidos, símil metal).</li>
+                                <li>Ideal para reemplazar aberturas ineficientes.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="linea-galeria">
+                        <h3>Galería de Imágenes</h3>
+                        <div class="galeria-grid">
+                            <img src="img/modena.jpg" alt="Puerta Vidriada PVC" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Puertas Machimbre PVC -->
+                <section class="linea-info" id="pvc-puertas-machimbre" role="tabpanel" aria-labelledby="tab-pvc-puertas-machimbre" hidden>
+                    <div class="linea-header">
+                        <h2>Puertas Machimbre de PVC</h2>
+                        <p class="linea-descripcion">Puertas de PVC estilo machimbre que combinan la estética tradicional con la tecnología moderna. De apertura interior y exterior, con bisagras en el marco del lateral elegido. Poseen el marco y las hojas con refuerzo de hierro galvanizado y burlete de estanqueidad de EPDM exterior e interior.</p>
+                    </div>
+                    
+                    <div class="linea-caracteristicas">
+                        <div class="caracteristica">
+                            <h3>Características Técnicas</h3>
+                            <ul>
+                                <li>Apertura interior y exterior, con bisagras en el marco del lateral elegido.</li>
+                                <li>Marco y hojas con refuerzo de hierro galvanizado.</li>
+                                <li>Burlete de estanqueidad de EPDM exterior e interior.</li>
+                                <li>Hoja y marco sellados perimetralmente.</li>
+                                <li>Diseño estilo machimbre con tecnología PVC.</li>
+                                <li><strong>Medidas máximas:</strong>
+                                    <ul>
+                                        <li>Una hoja: 1000 x 2300 mm</li>
+                                        <li>Dos hojas: 1800 x 2300 mm</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="caracteristica">
+                            <h3>Ventajas</h3>
+                            <ul>
+                                <li>Estética tradicional con tecnología moderna de PVC.</li>
+                                <li>Excelente aislamiento térmico y acústico.</li>
+                                <li>Resistencia superior a la intemperie.</li>
+                                <li>Sin mantenimiento requerido.</li>
+                                <li>Gran variedad de foliados disponibles (Turner Oak, colores sólidos, símil metal).</li>
+                                <li>Durabilidad excepcional sin deformaciones.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="linea-galeria">
+                        <h3>Galería de Imágenes</h3>
+                        <div class="galeria-grid">
+                            <img src="img/modena.jpg" alt="Puerta Machimbre PVC" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Puertas Frente PVC -->
+                <section class="linea-info" id="pvc-puertas-frente" role="tabpanel" aria-labelledby="tab-pvc-puertas-frente" hidden>
+                    <div class="linea-header">
+                        <h2>Puertas Frente de PVC</h2>
+                        <p class="linea-descripcion">Puertas de frente con paneles con foliados de origen Alemán, para la elaboración de aberturas y cerramientos termoconformados. Diseñadas para construcciones modernas o clásicas, por sus líneas simples y puras. Contamos con tres líneas exclusivas: Pampa, Lanín y Ranurada, cada una con detalles opcionales en sus diseños (Molduras en bajo relieve y embellecedores de PVC Símil Acero).</p>
+                    </div>
+                    
+                    <div class="linea-caracteristicas">
+                        <div class="caracteristica">
+                            <h3>Características Técnicas</h3>
+                            <ul>
+                                <li>Paneles con foliados de origen Alemán.</li>
+                                <li>Proceso termoconformado para aberturas y cerramientos.</li>
+                                <li>Detalles opcionales: Molduras en bajo relieve y embellecedores de PVC Símil Acero.</li>
+                                <li>Diseñadas para construcciones modernas o clásicas.</li>
+                                <li>Foliados disponibles: Golden Oak, Blanco y Nogal.</li>
+                                <li><strong>Medidas máximas:</strong>
+                                    <ul>
+                                        <li>Una hoja: 1000 x 2300 mm</li>
+                                        <li>Dos hojas: 1800 x 2300 mm</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="caracteristica">
+                            <h3>Líneas Disponibles</h3>
+                            
+                            <div class="linea-frente-card">
+                                <h4>Línea Ranurada</h4>
+                                <p class="linea-descripcion-frente">Diseño con líneas ranuradas que aportan textura y elegancia. Ideal para frentes que buscan un acabado sofisticado.</p>
+                                <p><strong>Foliados disponibles:</strong> Blanco, Golden Oak, Nogal</p>
+                            </div>
+
+                            <div class="linea-frente-card destacada">
+                                <h4>Línea Pampa</h4>
+                                <p class="linea-descripcion-frente">Diseño versátil con la mayor variedad de opciones. Líneas simples y puras que se adaptan a cualquier estilo arquitectónico.</p>
+                                <p><strong>Foliados disponibles:</strong> Blanco, Golden Oak, Nogal</p>
+                            </div>
+
+                            <div class="linea-frente-card">
+                                <h4>Línea Lanín</h4>
+                                <p class="linea-descripcion-frente">Diseño clásico y elegante. Perfecta para construcciones que buscan un estilo atemporal y refinado.</p>
+                                <p><strong>Foliados disponibles:</strong> Blanco, Golden Oak, Nogal</p>
+                            </div>
+                        </div>
+                        
+                        <div class="caracteristica">
+                            <h3>Ventajas</h3>
+                            <ul>
+                                <li>Revestimiento resistente a la intemperie que mejora la apariencia del elemento de construcción.</li>
+                                <li>Protección duradera sin necesidad de mantenimiento.</li>
+                                <li>Permite dar aspecto superficial de otros materiales como metal o madera (tanto visual como táctil).</li>
+                                <li>Óptimas prestaciones aislantes térmicas.</li>
+                                <li>No se deforma ni decolora.</li>
+                                <li>Diseños adaptables a cualquier estilo de hogar.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="linea-galeria">
+                        <h3>Galería de Imágenes</h3>
+                        <div class="galeria-grid">
+                            <img src="img/modena.jpg" alt="Puerta Frente PVC - Línea Ranurada" loading="lazy" decoding="async">
+                            <img src="img/modena1.jpg" alt="Puerta Frente PVC - Línea Pampa" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
 
     <!-- Footer -->
     <div id="footer-placeholder"></div>
+
+    <!-- Modal de detalles técnicos PVC -->
+    <div class="modal-overlay" id="modal-pvc-overlay" aria-hidden="true">
+        <div class="modal-content" id="modal-pvc-content" role="dialog" aria-modal="true" aria-labelledby="modal-pvc-titulo">
+            <button type="button" class="modal-cerrar" id="modal-pvc-cerrar" aria-label="Cerrar">&times;</button>
+            <div class="modal-body">
+                <div class="modal-col-img">
+                    <img id="modal-pvc-imagen" src="" alt="" loading="lazy">
+                </div>
+                <div class="modal-col-info">
+                    <h2 class="modal-titulo" id="modal-pvc-titulo"></h2>
+                    <p class="modal-descripcion" id="modal-pvc-descripcion"></p>
+                    <div class="modal-medidas" id="modal-pvc-medidas"></div>
+                    <h4 class="modal-subtitulo">Detalles Técnicos</h4>
+                    <ul class="modal-caracteristicas" id="modal-pvc-caracteristicas"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <script src="js/loadFooter.js"></script>
-
-    <script src="/js/lineas-tabs.js" defer></script>
-    <script src="/js/carrusel-frentes.js" defer></script>
+    <script src="js/lineas-tabs.js" defer></script>
+    <script src="js/carrusel-frentes.js" defer></script>
+    <script src="js/productos-pvc.js" defer></script>
+    <script src="js/modal-pvc.js" defer></script>
 </body>
 </html>
