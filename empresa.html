@@ -37,13 +37,11 @@
 
    <!-- Contenido principal -->
    <main id="contenido">
-       <!-- Video Institucional -->
-       <section class="video-institucional">
+       <!-- Imagen destacada Empresa -->
+       <section id="empresa" class="video-institucional">
            <h2>Conocé nuestra fábrica</h2>
-           <div class="contenedor-video">
-               <video id="video-institucional" controls preload="metadata" poster="img/portada-video.jpg" src="img/institucional.mp4">
-                   Tu navegador no soporta la reproducción de video.
-               </video>
+           <div class="empresa-img-wrapper">
+               <img src="img/empresa.jpg" alt="Equipo de Metalúrgica Breques" class="empresa-foto" loading="lazy">
            </div>
        </section>
 
@@ -114,13 +112,5 @@
    <div id="footer-placeholder"></div>
 
    <script src="js/loadFooter.js"></script>
-   <script>
-       var vid = document.getElementById('video-institucional');
-       if (vid) {
-           vid.addEventListener('ended', function() {
-               this.load();
-           });
-       }
-   </script>
 </body>
 </html>
