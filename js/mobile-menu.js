@@ -1,10 +1,12 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Esperar a que el header se cargue
-    setTimeout(function() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const nav = document.querySelector('.nav');
-        
-        if (menuToggle && nav) {
+let mobileMenuInicializado = false;
+
+function initMobileMenu() {
+    if (mobileMenuInicializado) return;
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    
+    if (menuToggle && nav) {
+            mobileMenuInicializado = true;
             // Función para abrir/cerrar el menú
             menuToggle.addEventListener('click', function() {
                 nav.classList.toggle('active');
@@ -28,5 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
         }
-    }, 500); // Esperar 500ms para asegurar que el header se cargue
-}); 
+}
+
+// headerLoaded se dispara cuando loadHeader.js inyecta el header
+document.addEventListener('headerLoaded', initMobileMenu);
+// Fallback: si el header ya estaba al cargar (p.ej. caché), o por si el evento se perdió
+document.addEventListener('DOMContentLoaded', initMobileMenu); 

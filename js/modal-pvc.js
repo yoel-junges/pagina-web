@@ -66,7 +66,7 @@
             });
         });
 
-        btnCerrar.addEventListener('click', cerrarModal);
+        if (btnCerrar) btnCerrar.addEventListener('click', cerrarModal);
 
         overlay.addEventListener('click', function(e) {
             if (e.target === overlay) cerrarModal();

@@ -55,6 +55,13 @@ function mostrarVistaObras(tipo) {
     }
 }
 
+// Función abrirModal (alias para onclick de galería - recibe path como string)
+function abrirModal(src) {
+    if (typeof src === 'string') {
+        mostrarModalImagen(src, '');
+    }
+}
+
 // Función para mostrar modal de imagen
 function mostrarModalImagen(src, alt) {
     // Crear modal si no existe

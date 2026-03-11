@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if (response.ok) {
         // Redirección a la página de gracias (mejor UX que alert)
-        window.location.href = formulario.getAttribute('action') || '/gracias.html';
+        window.location.href = formulario.getAttribute('action') || '/gracias';
       } else {
         throw new Error('Respuesta no OK del servidor');
       }

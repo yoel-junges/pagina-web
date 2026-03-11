@@ -442,8 +442,10 @@ section h3 {
 }
 
 .empresa-foto {
+    max-width: 100%;
     width: 100%;
     height: auto;
+    object-fit: contain;
     display: block;
 }
 
