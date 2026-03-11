@@ -1001,6 +1001,32 @@ section h3 {
     .carrusel-contenedor {
         padding: 0 30px;
     }
+
+    /* Respiración lateral en móvil: padding en contenedores (sin !important, sin anchos fijos) */
+    .lineas-inicio .contenedor-productos {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .productos .contenedor-productos,
+    .productos-pvc .contenedor-productos {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .comparativa-materiales .comparativa-container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .comparativa-tarjeta {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .otras-soluciones .soluciones-container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
 }
 
 @media (max-width: 480px) {
